@@ -8,29 +8,28 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     
     :root {
+      --bg-main: #ffffff;
+      --bg-card: #f8f9fa;
+      --bg-header: #e9ecef;
+      --border: #dee2e6;
+      --text: #212529;
+      --text-muted: #6c757d;
+      --accent: #a855f7;
+      --link: #0d6efd;
+    }
+    
+    [data-theme="dark"] {
       --bg-main: #0d1117;
       --bg-card: #161b22;
       --bg-header: #21262d;
       --border: #30363d;
       --text: #c9d1d9;
       --text-muted: #8b949e;
-      --accent: #238636;
-      --link: #58a6ff;
-      --ai-purple: #a855f7;
-    }
-    
-    [data-theme="light"] {
-      --bg-main: #f6f8fa;
-      --bg-card: #ffffff;
-      --bg-header: #f6f8fa;
-      --border: #d0d7de;
-      --text: #1f2328;
-      --text-muted: #656d76;
     }
     
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-      max-width: 900px;
+      max-width: 800px;
       margin: 0 auto;
       padding: 20px;
       background: var(--bg-main);
@@ -42,13 +41,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 30px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border);
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid var(--accent);
     }
     
     h1 { 
-      font-size: 2.5em;
+      font-size: 2em;
       background: linear-gradient(135deg, #a855f7, #ec4899);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -59,142 +58,99 @@
       background: var(--bg-card);
       border: 1px solid var(--border);
       color: var(--text);
-      padding: 10px 15px;
+      padding: 8px 12px;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 20px;
+      font-size: 18px;
     }
-    .theme-toggle:hover { background: var(--border); }
+    .theme-toggle:hover { background: var(--bg-header); }
     
     .date-banner {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-      border: 2px solid var(--ai-purple);
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      margin-bottom: 30px;
+      background: linear-gradient(135deg, #faf5ff 0%, #fdf4ff 100%);
+      border-left: 4px solid var(--accent);
+      padding: 15px 20px;
+      margin-bottom: 25px;
+      border-radius: 0 8px 8px 0;
     }
     
-    .date-banner.light {
-      background: linear-gradient(135deg, #faf5ff 0%, #fdf4ff 100%);
+    [data-theme="dark"] .date-banner {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     }
     
     .date-label {
       color: var(--text-muted);
-      font-size: 0.9em;
+      font-size: 0.85em;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
     }
     
     .date-value {
-      font-size: 1.8em;
+      font-size: 1.4em;
       font-weight: bold;
-      color: var(--ai-purple);
-      margin-top: 5px;
+      color: var(--accent);
     }
     
     .news-list {
       display: grid;
-      gap: 25px;
+      gap: 20px;
     }
     
     .news-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      transition: transform 0.2s, box-shadow 0.2s;
+      border-radius: 10px;
+      padding: 20px;
+      transition: box-shadow 0.2s;
     }
     
     .news-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(168, 85, 247, 0.1);
+      box-shadow: 0 4px 12px rgba(168, 85, 247, 0.1);
     }
     
-    .news-image-container {
-      width: 100%;
-      height: 200px;
-      position: relative;
-      overflow: hidden;
-      background: var(--bg-header);
-    }
-    
-    .news-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 0.3s;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    
-    .news-image.loaded {
-      opacity: 1;
-    }
-    
-    .news-image.loaded + .news-placeholder {
-      opacity: 0;
-    }
-    
-    .news-placeholder {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5em;
+    .news-number {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
       font-weight: bold;
-      color: rgba(255,255,255,0.9);
-      transition: opacity 0.3s;
-    }
-    
-    /* Source-specific gradients */
-    .placeholder-techcrunch { background: linear-gradient(135deg, #0a9e01, #0d5c00); }
-    .placeholder-the-verge { background: linear-gradient(135deg, #e5127d, #c10c54); }
-    .placeholder-wired { background: linear-gradient(135deg, #000000, #333333); }
-    .placeholder-venturebeat { background: linear-gradient(135deg, #f47b20, #d85a00); }
-    .placeholder-ars-technica { background: linear-gradient(135deg, #ff4e00, #ff9500); }
-    .placeholder-default { background: linear-gradient(135deg, #a855f7, #ec4899); }
-    
-    .news-content {
-      padding: 20px;
+      font-size: 0.85em;
+      margin-right: 10px;
     }
     
     .news-badges {
       display: flex;
       gap: 8px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       flex-wrap: wrap;
     }
     
     .news-source {
       display: inline-block;
-      background: linear-gradient(135deg, #a855f7, #ec4899);
-      color: white;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.8em;
+      background: var(--bg-header);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 3px 10px;
+      border-radius: 15px;
+      font-size: 0.75em;
       font-weight: 500;
     }
     
     .news-topic {
       display: inline-block;
-      background: var(--bg-header);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.8em;
+      background: linear-gradient(135deg, #a855f7, #ec4899);
+      color: white;
+      padding: 3px 10px;
+      border-radius: 15px;
+      font-size: 0.75em;
     }
     
     .news-title {
-      font-size: 1.4em;
-      line-height: 1.3;
+      font-size: 1.2em;
+      line-height: 1.4;
       margin-bottom: 12px;
       color: var(--text);
     }
@@ -205,22 +161,35 @@
     }
     
     .news-title a:hover {
-      color: var(--ai-purple);
+      color: var(--accent);
     }
     
     .news-tldr {
       background: var(--bg-header);
-      border-left: 3px solid var(--ai-purple);
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 0 8px 8px 0;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      border-radius: 6px;
       font-size: 0.95em;
-      line-height: 1.6;
-      color: var(--text-muted);
+      line-height: 1.5;
+      color: var(--text);
     }
     
     .news-tldr strong {
-      color: var(--ai-purple);
+      color: var(--accent);
+    }
+    
+    .news-importance {
+      padding: 10px 15px;
+      margin-bottom: 12px;
+      border-left: 3px solid #10b981;
+      background: rgba(16, 185, 129, 0.05);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.9em;
+      color: var(--text-muted);
+    }
+    
+    .news-importance strong {
+      color: #10b981;
     }
     
     .news-meta {
@@ -235,12 +204,13 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      background: var(--ai-purple);
+      background: var(--accent);
       color: white;
-      padding: 8px 16px;
+      padding: 6px 14px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 500;
+      font-size: 0.85em;
       transition: opacity 0.2s;
     }
     
@@ -249,14 +219,8 @@
       color: white;
     }
     
-    .loading {
-      text-align: center;
-      padding: 50px;
-      color: var(--text-muted);
-    }
-    
     .footer {
-      margin-top: 40px;
+      margin-top: 30px;
       padding-top: 20px;
       border-top: 1px solid var(--border);
       text-align: center;
@@ -265,7 +229,7 @@
     .footer-links {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
       margin-bottom: 15px;
       flex-wrap: wrap;
     }
@@ -273,10 +237,11 @@
     .footer-links a {
       color: var(--link);
       text-decoration: none;
-      padding: 8px 16px;
+      padding: 6px 12px;
       border-radius: 6px;
       background: var(--bg-card);
       border: 1px solid var(--border);
+      font-size: 0.9em;
     }
     
     .footer-links a:hover {
@@ -285,12 +250,12 @@
     
     .footer-text {
       color: var(--text-muted);
-      font-size: 0.9em;
+      font-size: 0.85em;
     }
     
     @media (max-width: 600px) {
-      h1 { font-size: 1.8em; }
-      .news-title { font-size: 1.2em; }
+      h1 { font-size: 1.6em; }
+      .news-title { font-size: 1.1em; }
     }
   </style>
 </head>
@@ -300,20 +265,20 @@
     <button class="theme-toggle" id="theme-toggle" title="Toggle theme">🌓</button>
   </div>
   
-  <div class="date-banner" id="date-banner">
+  <div class="date-banner">
     <div class="date-label">📰 Top AI Stories for</div>
     <div class="date-value" id="date-value">Loading...</div>
   </div>
   
   <div class="news-list" id="news-list">
-    <div class="loading">⏳ Loading latest AI news...</div>
+    <div style="text-align: center; padding: 30px; color: var(--text-muted);">⏳ Loading...</div>
   </div>
   
   <div class="footer">
     <div class="footer-links">
       <a href="https://leetcode.com/u/alexey_wish/">🎯 LeetCode</a>
       <a href="https://github.com/alexeybutyrev/leetcode-solutions">📝 Solutions</a>
-      <a href="https://alexeybutyrev.github.io/daily-leetcode/">📅 Daily Practice</a>
+      <a href="https://alexeybutyrev.github.io/daily-leetcode/">📅 Daily</a>
       <a href="https://github.com/alexeybutyrev/ai-news">💻 GitHub</a>
     </div>
     <p class="footer-text">
@@ -323,93 +288,60 @@
   </div>
 
   <script>
-    // Theme handling
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    // Theme - default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
-    if (savedTheme === 'light') {
-      document.getElementById('date-banner').classList.add('light');
-    }
     
     document.getElementById('theme-toggle').addEventListener('click', () => {
       const current = document.documentElement.getAttribute('data-theme');
       const next = current === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
-      document.getElementById('date-banner').classList.toggle('light', next === 'light');
       localStorage.setItem('theme', next);
     });
-    
-    // Source to CSS class mapping
-    function getSourceClass(source) {
-      const map = {
-        'TechCrunch AI': 'placeholder-techcrunch',
-        'The Verge AI': 'placeholder-the-verge',
-        'Wired': 'placeholder-wired',
-        'VentureBeat': 'placeholder-venturebeat',
-        'Ars Technica': 'placeholder-ars-technica'
-      };
-      return map[source] || 'placeholder-default';
-    }
     
     // Load news
     fetch('news.json?t=' + Date.now())
       .then(r => r.json())
       .then(data => {
-        // Update date
         document.getElementById('date-value').textContent = data.date || 'Today';
-        
-        // Render articles
         const container = document.getElementById('news-list');
         
         if (!data.articles || data.articles.length === 0) {
-          container.innerHTML = '<div class="loading">No articles found for today. Check back later!</div>';
+          container.innerHTML = '<div style="text-align: center; padding: 30px; color: var(--text-muted);">No articles found.</div>';
           return;
         }
         
-        container.innerHTML = data.articles.map(article => {
-          const hasImage = article.has_image && article.image;
-          const sourceClass = getSourceClass(article.source);
-          
-          return `
+        container.innerHTML = data.articles.map((article, i) => `
           <article class="news-card">
-            <div class="news-image-container">
-              ${hasImage ? `
-                <img class="news-image" 
-                     src="${escapeHtml(article.image)}" 
-                     alt="${escapeHtml(article.title)}"
-                     loading="lazy"
-                     onload="this.classList.add('loaded')">
-              ` : ''}
-              <div class="news-placeholder ${sourceClass}">
-                ${escapeHtml(article.source)}
-              </div>
+            <div class="news-badges">
+              <span class="news-number">${i + 1}</span>
+              <span class="news-source">${escapeHtml(article.source)}</span>
+              ${article.topic ? `<span class="news-topic">${escapeHtml(article.topic)}</span>` : ''}
             </div>
-            <div class="news-content">
-              <div class="news-badges">
-                <span class="news-source">${escapeHtml(article.source)}</span>
-                ${article.topic ? `<span class="news-topic">${escapeHtml(article.topic)}</span>` : ''}
-              </div>
-              <h2 class="news-title">
-                <a href="${escapeHtml(article.url)}" target="_blank" rel="noopener">
-                  ${escapeHtml(article.title)}
-                </a>
-              </h2>
-              <div class="news-tldr">
-                <strong>🤖 TLDR:</strong> ${escapeHtml(article.tldr)}
-              </div>
-              <div class="news-meta">
-                <span>${escapeHtml(article.formatted_date || article.date)}</span>
-                <a href="${escapeHtml(article.url)}" target="_blank" rel="noopener" class="read-more">
-                  Read More →
-                </a>
-              </div>
+            <h2 class="news-title">
+              <a href="${escapeHtml(article.url)}" target="_blank" rel="noopener">
+                ${escapeHtml(article.title)}
+              </a>
+            </h2>
+            <div class="news-tldr">
+              <strong>TLDR:</strong> ${escapeHtml(article.tldr)}
+            </div>
+            <div class="news-importance">
+              <strong>Why it matters:</strong> ${escapeHtml(article.importance || 'Relevant for understanding AI industry trends.')}
+            </div>
+            <div class="news-meta">
+              <span>${escapeHtml(article.formatted_date || article.date)}</span>
+              <a href="${escapeHtml(article.url)}" target="_blank" rel="noopener" class="read-more">
+                Read →
+              </a>
             </div>
           </article>
-        `}).join('');
+        `).join('');
       })
       .catch(err => {
         document.getElementById('news-list').innerHTML = `
-          <div class="loading">
-            ⚠️ Could not load news. Try refreshing the page.<br>
+          <div style="text-align: center; padding: 30px; color: var(--text-muted);">
+            ⚠️ Could not load news.<br>
             <small>${err.message}</small>
           </div>
         `;

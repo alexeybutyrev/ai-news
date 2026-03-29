@@ -253,17 +253,7 @@ def calculate_relevance_score(article: Dict) -> float:
     return score
 
 def generate_tldr(title: str, summary: str) -> str:
-    """Generate TLDR using GLM-5 via API"""
-    # Use the built-in model for TLDR generation
-    prompt = f"""Summarize this AI news story in exactly 2 sentences. Be concise and informative.
-
-Title: {title}
-Summary: {summary[:500]}
-
-TLDR:"""
-
-    # For now, create a simple summary
-    # In production, this would call GLM-5 API
+    """Generate TLDR - 2 sentence summary"""
     sentences = summary.split('. ')[:2]
     if len(sentences) >= 2:
         return '. '.join(sentences[:2]) + '.'
@@ -271,6 +261,31 @@ TLDR:"""
         return sentences[0] + '.'
     else:
         return f"This article discusses {title.lower()}."
+
+def generate_importance(title: str, summary: str, topic: str) -> str:
+    """Generate 1-sentence importance explanation"""
+    text = (title + ' ' + summary).lower()
+    
+    if 'openai' in text or 'gpt' in text:
+        return "Important for understanding OpenAI's strategy and the competitive AI landscape."
+    elif 'mistral' in text:
+        return "Shows how OpenAI competitors are differentiating with open-source approaches."
+    elif 'claude' in text or 'anthropic' in text:
+        return "Significant for the AI safety-focused alternative to OpenAI."
+    elif 'gemini' in text or 'google' in text:
+        return "Google's AI developments impact the entire search and cloud ecosystem."
+    elif topic == 'Voice AI':
+        return "Voice AI is becoming a key battleground for AI platforms."
+    elif topic == 'Safety':
+        return "AI safety developments are crucial for responsible AI deployment at scale."
+    elif topic == 'Startups':
+        return "Funding news indicates investor confidence and emerging AI trends."
+    elif topic == 'Open Source':
+        return "Open source models are democratizing access to advanced AI capabilities."
+    elif topic == 'Hardware':
+        return "Hardware advances directly impact AI compute costs and accessibility."
+    else:
+        return "Relevant for staying current with AI industry developments."
 
 def main():
     print("=" * 50)
@@ -308,39 +323,28 @@ def main():
     # Sort by relevance score
     dated_articles.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
     
-    # Get top 5
-    top_articles = dated_articles[:5]
+    # Get top 10
+    top_articles = dated_articles[:10]
     
     print(f"\n🎯 Top {len(top_articles)} articles selected")
     
-    # Generate TLDR for each
-    print("\n✨ Generating TLDR summaries...")
+    # Generate TLDR and importance for each
+    print("\n✨ Generating summaries...")
     for i, article in enumerate(top_articles):
         print(f"   [{i+1}] {article['title'][:50]}...")
-        article['tldr'] = generate_tldr(article['title'], article['summary'])
-        # Detect topic
+        # Detect topic first
         article['topic'] = detect_topic(article['title'], article['summary'])
+        # Generate TLDR
+        article['tldr'] = generate_tldr(article['title'], article['summary'])
+        # Generate importance
+        article['importance'] = generate_importance(article['title'], article['summary'], article['topic'])
         # Format date nicely
         if 'parsed_date' in article:
             article['formatted_date'] = article['parsed_date'].strftime('%B %d, %Y')
         else:
             article['formatted_date'] = yesterday_str
     
-    # Download images
-    print("\n📥 Downloading images...")
-    for i, article in enumerate(top_articles):
-        if article.get('image'):
-            print(f"   [{i+1}] Downloading...", end=' ')
-            local_path = download_image(article['image'], i + 1)
-            if local_path:
-                article['image'] = local_path
-                article['has_image'] = True
-                print("✅")
-            else:
-                article['has_image'] = False
-                print("❌")
-        else:
-            article['has_image'] = False
+    # Remove image downloading - keeping text-only
     
     # Clean articles for JSON serialization
     for article in top_articles:
