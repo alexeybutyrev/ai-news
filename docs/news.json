@@ -1,0 +1,15 @@
+{
+  "date": "2026-03-29",
+  "generated_at": "2026-03-29T16:00:00",
+  "articles": [
+    {
+      "title": "AI News Coming Soon",
+      "url": "https://github.com/alexeybutyrev/ai-news",
+      "summary": "AI-curated daily news will appear here. The scraper runs daily at 6:00 AM UTC.",
+      "image": "https://via.placeholder.com/400x200?text=AI+News+Daily",
+      "source": "System",
+      "tldr": "This is a placeholder. Real AI news will appear after the first scraper run at 6:00 AM UTC.",
+      "formatted_date": "March 29, 2026"
+    }
+  ]
+}

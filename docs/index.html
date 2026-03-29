@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🤖 AI News Daily</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --bg-main: #0d1117;
+      --bg-card: #161b22;
+      --bg-header: #21262d;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-muted: #8b949e;
+      --accent: #238636;
+      --link: #58a6ff;
+      --ai-purple: #a855f7;
+    }
+    
+    [data-theme="light"] {
+      --bg-main: #f6f8fa;
+      --bg-card: #ffffff;
+      --bg-header: #f6f8fa;
+      --border: #d0d7de;
+      --text: #1f2328;
+      --text-muted: #656d76;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background: var(--bg-main);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    h1 { 
+      font-size: 2.5em;
+      background: linear-gradient(135deg, #a855f7, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .theme-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    .theme-toggle:hover { background: var(--border); }
+    
+    .date-banner {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border: 2px solid var(--ai-purple);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .date-banner.light {
+      background: linear-gradient(135deg, #faf5ff 0%, #fdf4ff 100%);
+    }
+    
+    .date-label {
+      color: var(--text-muted);
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .date-value {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: var(--ai-purple);
+      margin-top: 5px;
+    }
+    
+    .news-list {
+      display: grid;
+      gap: 25px;
+    }
+    
+    .news-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .news-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(168, 85, 247, 0.1);
+    }
+    
+    .news-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: var(--bg-header);
+    }
+    
+    .news-content {
+      padding: 20px;
+    }
+    
+    .news-source {
+      display: inline-block;
+      background: linear-gradient(135deg, #a855f7, #ec4899);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8em;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    
+    .news-title {
+      font-size: 1.4em;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    
+    .news-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    .news-title a:hover {
+      color: var(--ai-purple);
+    }
+    
+    .news-tldr {
+      background: var(--bg-header);
+      border-left: 3px solid var(--ai-purple);
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95em;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+    
+    .news-tldr strong {
+      color: var(--ai-purple);
+    }
+    
+    .news-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85em;
+      color: var(--text-muted);
+    }
+    
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--ai-purple);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+    
+    .read-more:hover {
+      opacity: 0.9;
+      color: white;
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 50px;
+      color: var(--text-muted);
+    }
+    
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: var(--link);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+    }
+    
+    .footer-links a:hover {
+      background: var(--bg-header);
+    }
+    
+    .footer-text {
+      color: var(--text-muted);
+      font-size: 0.9em;
+    }
+    
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8em; }
+      .news-title { font-size: 1.2em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🤖 AI News Daily</h1>
+    <button class="theme-toggle" id="theme-toggle" title="Toggle theme">🌓</button>
+  </div>
+  
+  <div class="date-banner" id="date-banner">
+    <div class="date-label">📰 Top AI Stories for</div>
+    <div class="date-value" id="date-value">Loading...</div>
+  </div>
+  
+  <div class="news-list" id="news-list">
+    <div class="loading">⏳ Loading latest AI news...</div>
+  </div>
+  
+  <div class="footer">
+    <div class="footer-links">
+      <a href="https://leetcode.com/u/alexey_wish/">🎯 LeetCode</a>
+      <a href="https://github.com/alexeybutyrev/leetcode-solutions">📝 Solutions</a>
+      <a href="https://alexeybutyrev.github.io/daily-leetcode/">📅 Daily Practice</a>
+      <a href="https://github.com/alexeybutyrev/ai-news">💻 GitHub</a>
+    </div>
+    <p class="footer-text">
+      Curated by AI • Updated daily at 6:00 AM UTC<br>
+      Made with ❤️ by Alexey Butyrev
+    </p>
+  </div>
+
+  <script>
+    // Theme handling
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    if (savedTheme === 'light') {
+      document.getElementById('date-banner').classList.add('light');
+    }
+    
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      document.getElementById('date-banner').classList.toggle('light', next === 'light');
+      localStorage.setItem('theme', next);
+    });
+    
+    // Load news
+    fetch('news.json?t=' + Date.now())
+      .then(r => r.json())
+      .then(data => {
+        // Update date
+        document.getElementById('date-value').textContent = data.date || 'Today';
+        
+        // Render articles
+        const container = document.getElementById('news-list');
+        
+        if (!data.articles || data.articles.length === 0) {
+          container.innerHTML = '<div class="loading">No articles found for today. Check back later!</div>';
+          return;
+        }
+        
+        container.innerHTML = data.articles.map(article => `
+          <article class="news-card">
+            <img class="news-image" 
+                 src="${escapeHtml(article.image)}" 
+                 alt="${escapeHtml(article.title)}"
+                 onerror="this.src='https://via.placeholder.com/400x200?text=AI+News'">
+            <div class="news-content">
+              <span class="news-source">${escapeHtml(article.source)}</span>
+              <h2 class="news-title">
+                <a href="${escapeHtml(article.url)}" target="_blank" rel="noopener">
+                  ${escapeHtml(article.title)}
+                </a>
+              </h2>
+              <div class="news-tldr">
+                <strong>🤖 TLDR:</strong> ${escapeHtml(article.tldr)}
+              </div>
+              <div class="news-meta">
+                <span>${escapeHtml(article.formatted_date || article.date)}</span>
+                <a href="${escapeHtml(article.url)}" target="_blank" rel="noopener" class="read-more">
+                  Read More →
+                </a>
+              </div>
+            </div>
+          </article>
+        `).join('');
+      })
+      .catch(err => {
+        document.getElementById('news-list').innerHTML = `
+          <div class="loading">
+            ⚠️ Could not load news. Try refreshing the page.<br>
+            <small>${err.message}</small>
+          </div>
+        `;
+      });
+    
+    function escapeHtml(text) {
+      if (!text) return '';
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+  </script>
+</body>
+</html>
