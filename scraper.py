@@ -20,9 +20,9 @@ REPO_DIR = "/home/node/.openclaw/workspace/ai-news"
 RSS_FEEDS = [
     {"name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "priority": 1},
     {"name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "priority": 1},
-    {"name": "Wired AI", "url": "https://www.wired.com/feed/tag/artificial-intelligence/latest/rss", "priority": 1},
-    {"name": "VentureBeat AI", "url": "https://venturebeat.com/ai/feed/", "priority": 1},
-    {"name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "priority": 2},
+    {"name": "Wired", "url": "https://www.wired.com/feed/rss", "priority": 2},
+    {"name": "VentureBeat", "url": "https://venturebeat.com/feed/", "priority": 2},
+    {"name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "priority": 1},
 ]
 
 class HTMLStripper(HTMLParser):
