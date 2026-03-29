@@ -21,11 +21,18 @@ REPO_DIR = "/home/node/.openclaw/workspace/ai-news"
 IMAGES_DIR = "/home/node/.openclaw/workspace/ai-news/docs/images"
 
 RSS_FEEDS = [
+    # Priority 1 - AI-specific, highest relevance
     {"name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "priority": 1},
-    {"name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "priority": 1},
+    {"name": "MIT Tech Review", "url": "https://www.technologyreview.com/feed/", "priority": 1},
+    {"name": "VentureBeat", "url": "https://venturebeat.com/feed/", "priority": 1},
+    {"name": "Latent Space", "url": "https://latent.space/feed", "priority": 1},
+    
+    # Priority 2 - AI/Tech focused
     {"name": "Wired", "url": "https://www.wired.com/feed/rss", "priority": 2},
-    {"name": "VentureBeat", "url": "https://venturebeat.com/feed/", "priority": 2},
-    {"name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "priority": 1},
+    {"name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "priority": 2},
+    {"name": "Hugging Face Blog", "url": "https://huggingface.co/blog/feed.xml", "priority": 2},
+    {"name": "Interconnects", "url": "https://www.interconnects.ai/feed", "priority": 2},
+    {"name": "The Sequence", "url": "https://thesequence.substack.com/feed", "priority": 2},
 ]
 
 class HTMLStripper(HTMLParser):
@@ -233,22 +240,28 @@ def calculate_relevance_score(article: Dict) -> float:
     summary = article.get('summary', '').lower()
     text = title + ' ' + summary
     
-    # High-value keywords
+    # High-value keywords (weight: 2)
     high_keywords = ['openai', 'gpt', 'chatgpt', 'claude', 'anthropic', 'gemini', 'google ai', 
-                     'llm', 'agi', 'breakthrough', 'launch', 'release', 'announce']
+                     'llm', 'agi', 'breakthrough', 'launch', 'release', 'announce', 'mistral']
     for kw in high_keywords:
         if kw in text:
             score += 2
     
-    # Medium keywords
+    # Medium keywords (weight: 1)
     medium_keywords = ['machine learning', 'deep learning', 'neural', 'transformer', 
-                       'training', 'model', 'ai safety', 'regulation', 'startup']
+                       'training', 'model', 'ai safety', 'regulation', 'startup', 'open source']
     for kw in medium_keywords:
         if kw in text:
             score += 1
     
-    # Source priority bonus
-    score += (3 - article.get('priority', 2)) * 0.5
+    # Source priority bonus - Priority 1 sources get significant boost
+    priority = article.get('priority', 3)
+    if priority == 1:
+        score += 5  # Major boost for AI-specific sources
+    elif priority == 2:
+        score += 2  # Moderate boost for tech sources
+    else:
+        score += 0.5  # Small boost for general sources
     
     return score
 
