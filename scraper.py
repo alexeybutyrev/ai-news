@@ -85,8 +85,8 @@ def download_image(url: str, article_id: int) -> Optional[str]:
         with urllib.request.urlopen(req, timeout=15, context=ctx) as response:
             data = response.read()
             
-        # Check if image is valid (at least 1KB)
-        if len(data) < 1024:
+        # Check if image is valid (at least 5KB to avoid placeholders)
+        if len(data) < 5120:
             return None
         
         with open(filepath, 'wb') as f:
