@@ -111,15 +111,57 @@
       box-shadow: 0 10px 30px rgba(168, 85, 247, 0.1);
     }
     
-    .news-image {
+    .news-image-container {
       width: 100%;
       height: 200px;
-      object-fit: cover;
+      position: relative;
+      overflow: hidden;
       background: var(--bg-header);
     }
     
+    .news-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .news-image.loaded {
+      opacity: 1;
+    }
+    
+    .news-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: rgba(255,255,255,0.9);
+    }
+    
+    /* Source-specific gradients */
+    .placeholder-techcrunch { background: linear-gradient(135deg, #0a9e01, #0d5c00); }
+    .placeholder-the-verge { background: linear-gradient(135deg, #e5127d, #c10c54); }
+    .placeholder-wired { background: linear-gradient(135deg, #000000, #333333); }
+    .placeholder-venturebeat { background: linear-gradient(135deg, #f47b20, #d85a00); }
+    .placeholder-ars-technica { background: linear-gradient(135deg, #ff4e00, #ff9500); }
+    .placeholder-default { background: linear-gradient(135deg, #a855f7, #ec4899); }
+    
     .news-content {
       padding: 20px;
+    }
+    
+    .news-badges {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
     }
     
     .news-source {
@@ -130,7 +172,16 @@
       border-radius: 20px;
       font-size: 0.8em;
       font-weight: 500;
-      margin-bottom: 12px;
+    }
+    
+    .news-topic {
+      display: inline-block;
+      background: var(--bg-header);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8em;
     }
     
     .news-title {
@@ -279,6 +330,18 @@
       localStorage.setItem('theme', next);
     });
     
+    // Source to CSS class mapping
+    function getSourceClass(source) {
+      const map = {
+        'TechCrunch AI': 'placeholder-techcrunch',
+        'The Verge AI': 'placeholder-the-verge',
+        'Wired': 'placeholder-wired',
+        'VentureBeat': 'placeholder-venturebeat',
+        'Ars Technica': 'placeholder-ars-technica'
+      };
+      return map[source] || 'placeholder-default';
+    }
+    
     // Load news
     fetch('news.json?t=' + Date.now())
       .then(r => r.json())
@@ -294,14 +357,29 @@
           return;
         }
         
-        container.innerHTML = data.articles.map(article => `
+        container.innerHTML = data.articles.map(article => {
+          const hasImage = article.has_image && article.image;
+          const sourceClass = getSourceClass(article.source);
+          
+          return `
           <article class="news-card">
-            <img class="news-image" 
-                 src="${escapeHtml(article.image)}" 
-                 alt="${escapeHtml(article.title)}"
-                 onerror="this.src='https://via.placeholder.com/400x200?text=AI+News'">
+            <div class="news-image-container">
+              ${hasImage ? `
+                <img class="news-image" 
+                     src="${escapeHtml(article.image)}" 
+                     alt="${escapeHtml(article.title)}"
+                     loading="lazy"
+                     onload="this.classList.add('loaded')">
+              ` : ''}
+              <div class="news-placeholder ${sourceClass}">
+                ${escapeHtml(article.source)}
+              </div>
+            </div>
             <div class="news-content">
-              <span class="news-source">${escapeHtml(article.source)}</span>
+              <div class="news-badges">
+                <span class="news-source">${escapeHtml(article.source)}</span>
+                ${article.topic ? `<span class="news-topic">${escapeHtml(article.topic)}</span>` : ''}
+              </div>
               <h2 class="news-title">
                 <a href="${escapeHtml(article.url)}" target="_blank" rel="noopener">
                   ${escapeHtml(article.title)}
@@ -318,7 +396,7 @@
               </div>
             </div>
           </article>
-        `).join('');
+        `}).join('');
       })
       .catch(err => {
         document.getElementById('news-list').innerHTML = `

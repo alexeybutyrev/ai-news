@@ -106,10 +106,11 @@ def parse_rss_feed(feed_url: str, source_name: str, priority: int) -> List[Dict]
                     'title': strip_html(title.text) if title is not None and title.text else '',
                     'url': link.text if link is not None and link.text else '',
                     'summary': strip_html(description.text)[:500] if description is not None and description.text else '',
-                    'image': image_url or 'https://via.placeholder.com/400x200?text=AI+News',
+                    'image': image_url,
                     'source': source_name,
                     'priority': priority,
                     'date': pub_date.text if pub_date is not None and pub_date.text else '',
+                    'has_image': image_url is not None,
                 }
                 
                 if article['title'] and article['url']:
@@ -147,6 +148,30 @@ def is_yesterday(article_date: datetime) -> bool:
     return (article_date.year == yesterday.year and 
             article_date.month == yesterday.month and 
             article_date.day == yesterday.day)
+
+def detect_topic(title: str, summary: str) -> str:
+    """Detect article topic from title and summary"""
+    text = (title + ' ' + summary).lower()
+    
+    topic_keywords = {
+        'LLMs': ['llm', 'gpt', 'chatgpt', 'claude', 'gemini', 'language model', 'llama', 'mistral'],
+        'Voice AI': ['speech', 'voice', 'audio', 'tts', 'text-to-speech', 'elevenlabs'],
+        'Robotics': ['robot', 'autonomous', 'embodied'],
+        'Safety': ['safety', 'alignment', 'responsible ai', 'regulation', 'risk'],
+        'Research': ['research', 'paper', 'study', 'breakthrough', 'discovery'],
+        'Startups': ['startup', 'funding', 'raise', 'invest', 'launch'],
+        'Enterprise': ['enterprise', 'business', 'b2b', 'customer'],
+        'Open Source': ['open source', 'open-source', 'github', 'hugging face'],
+        'Hardware': ['chip', 'gpu', 'nvidia', 'hardware', 'processor'],
+        'Generative AI': ['generative', 'image', 'video', 'midjourney', 'dall-e', 'stable diffusion'],
+    }
+    
+    for topic, keywords in topic_keywords.items():
+        for kw in keywords:
+            if kw in text:
+                return topic
+    
+    return 'AI News'
 
 def calculate_relevance_score(article: Dict) -> float:
     """Calculate relevance score based on keywords and source priority"""
@@ -241,6 +266,8 @@ def main():
     for i, article in enumerate(top_articles):
         print(f"   [{i+1}] {article['title'][:50]}...")
         article['tldr'] = generate_tldr(article['title'], article['summary'])
+        # Detect topic
+        article['topic'] = detect_topic(article['title'], article['summary'])
         # Format date nicely
         if 'parsed_date' in article:
             article['formatted_date'] = article['parsed_date'].strftime('%B %d, %Y')
