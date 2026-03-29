@@ -391,19 +391,23 @@ def main():
     
     print(f"\n💾 Saved to {OUTPUT_FILE}")
     
-    # Push to GitHub
-    print("\n🚀 Pushing to GitHub...")
-    os.chdir(REPO_DIR)
-    
-    # Initialize git if needed
-    if not os.path.exists('.git'):
-        subprocess.run(['git', 'init'], check=True)
-        subprocess.run(['git', 'remote', 'add', 'origin', 
-                       'https://github.com/alexeybutyrev/ai-news.git'], check=True)
-    
-    subprocess.run(['git', 'add', '-A'], check=True)
-    subprocess.run(['git', 'commit', '-m', f'Update AI news for {yesterday_str}'], check=True)
-    subprocess.run(['git', 'push', '-f', 'origin', 'HEAD:main'], check=True)
+    # Only push to GitHub if NOT running in CI (GitHub Actions handles push)
+    if not os.environ.get('CI'):
+        print("\n🚀 Pushing to GitHub...")
+        os.chdir(REPO_DIR)
+        
+        # Initialize git if needed
+        if not os.path.exists('.git'):
+            subprocess.run(['git', 'init'], check=True)
+            subprocess.run(['git', 'remote', 'add', 'origin', 
+                           'https://github.com/alexeybutyrev/ai-news.git'], check=True)
+        
+        subprocess.run(['git', 'add', '-A'], check=True)
+        subprocess.run(['git', 'commit', '-m', f'Update AI news for {yesterday_str}'], check=True)
+        subprocess.run(['git', 'push', '-f', 'origin', 'HEAD:main'], check=True)
+        print("\n✅ Pushed to GitHub!")
+    else:
+        print("\n✅ Running in CI - GitHub Actions will handle the push")
     
     print("\n✅ Done!")
     print("=" * 50)

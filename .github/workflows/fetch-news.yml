@@ -1,0 +1,60 @@
+name: Fetch AI News
+
+on:
+  schedule:
+    # Run daily at 6:00 AM UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-news:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Run scraper
+        run: python3 scraper.py
+        env:
+          # No external API keys needed - scraper uses stdlib only
+          CI: true
+      
+      - name: Create archive
+        run: |
+          # Create archive directory
+          mkdir -p docs/archive
+          
+          # Get yesterday's date
+          YESTERDAY=$(date -d "yesterday" +%Y-%m-%d)
+          
+          # Copy news.json to archive with date
+          if [ -f docs/news.json ]; then
+            cp docs/news.json "docs/archive/${YESTERDAY}.json"
+            echo "Archived to docs/archive/${YESTERDAY}.json"
+          fi
+          
+          # Keep only last 30 days of archives
+          cd docs/archive
+          ls -t | tail -n +31 | xargs -r rm
+          echo "Cleaned up old archives"
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update AI news - $(date +%Y-%m-%d)"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

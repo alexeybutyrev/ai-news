@@ -226,6 +226,42 @@
       text-align: center;
     }
     
+    .archive-section {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 2px solid var(--border);
+    }
+    
+    .archive-title {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      color: var(--text-muted);
+    }
+    
+    .archive-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+    
+    .archive-link {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.85em;
+      transition: all 0.2s;
+    }
+    
+    .archive-link:hover {
+      background: var(--bg-header);
+      color: var(--text);
+      text-decoration: none;
+    }
+    
     .footer-links {
       display: flex;
       justify-content: center;
@@ -272,6 +308,11 @@
   
   <div class="news-list" id="news-list">
     <div style="text-align: center; padding: 30px; color: var(--text-muted);">⏳ Loading...</div>
+  </div>
+  
+  <div class="archive-section" id="archive-section" style="display: none;">
+    <div class="archive-title">📅 Past Days</div>
+    <div class="archive-list" id="archive-list"></div>
   </div>
   
   <div class="footer">
@@ -337,6 +378,9 @@
             </div>
           </article>
         `).join('');
+        
+        // Load archive links
+        loadArchive();
       })
       .catch(err => {
         document.getElementById('news-list').innerHTML = `
@@ -346,6 +390,43 @@
           </div>
         `;
       });
+    
+    // Load archive
+    async function loadArchive() {
+      const archiveSection = document.getElementById('archive-section');
+      const archiveList = document.getElementById('archive-list');
+      
+      // Try to load archive files for the last 7 days
+      const dates = [];
+      const today = new Date();
+      
+      for (let i = 1; i <= 7; i++) {
+        const d = new Date(today);
+        d.setDate(d.getDate() - i);
+        const dateStr = d.toISOString().split('T')[0];
+        dates.push(dateStr);
+      }
+      
+      const links = [];
+      
+      for (const date of dates) {
+        try {
+          const r = await fetch(`archive/${date}.json`, { method: 'HEAD' });
+          if (r.ok) {
+            links.push(date);
+          }
+        } catch {}
+      }
+      
+      if (links.length > 0) {
+        archiveList.innerHTML = links.map(date => {
+          const d = new Date(date);
+          const formatted = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+          return `<a href="archive/${date}.json" class="archive-link" target="_blank">${formatted}</a>`;
+        }).join('');
+        archiveSection.style.display = 'block';
+      }
+    }
     
     function escapeHtml(text) {
       if (!text) return '';
