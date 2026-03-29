@@ -12,10 +12,13 @@ import urllib.request
 import urllib.error
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
+import hashlib
+import ssl
 
 # Configuration
 OUTPUT_FILE = "/home/node/.openclaw/workspace/ai-news/docs/news.json"
 REPO_DIR = "/home/node/.openclaw/workspace/ai-news"
+IMAGES_DIR = "/home/node/.openclaw/workspace/ai-news/docs/images"
 
 RSS_FEEDS = [
     {"name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "priority": 1},
@@ -45,6 +48,55 @@ def strip_html(text: str) -> str:
     s = HTMLStripper()
     s.feed(text)
     return s.get_data()
+
+def download_image(url: str, article_id: int) -> Optional[str]:
+    """Download image and save locally, return local path"""
+    if not url:
+        return None
+    
+    try:
+        # Create images directory
+        os.makedirs(IMAGES_DIR, exist_ok=True)
+        
+        # Generate filename from URL hash
+        ext = '.jpg'
+        if '.png' in url.lower():
+            ext = '.png'
+        elif '.webp' in url.lower():
+            ext = '.webp'
+        elif '.gif' in url.lower():
+            ext = '.gif'
+        
+        filename = f"article_{article_id}{ext}"
+        filepath = os.path.join(IMAGES_DIR, filename)
+        
+        # Download with SSL context to handle some certificate issues
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        
+        req = urllib.request.Request(
+            url,
+            headers={
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+            }
+        )
+        
+        with urllib.request.urlopen(req, timeout=15, context=ctx) as response:
+            data = response.read()
+            
+        # Check if image is valid (at least 1KB)
+        if len(data) < 1024:
+            return None
+        
+        with open(filepath, 'wb') as f:
+            f.write(data)
+        
+        return f"images/{filename}"
+        
+    except Exception as e:
+        print(f"     Could not download image: {e}")
+        return None
 
 def fetch_url(url: str) -> Optional[str]:
     """Fetch URL content with error handling"""
@@ -274,6 +326,22 @@ def main():
         else:
             article['formatted_date'] = yesterday_str
     
+    # Download images
+    print("\n📥 Downloading images...")
+    for i, article in enumerate(top_articles):
+        if article.get('image'):
+            print(f"   [{i+1}] Downloading...", end=' ')
+            local_path = download_image(article['image'], i + 1)
+            if local_path:
+                article['image'] = local_path
+                article['has_image'] = True
+                print("✅")
+            else:
+                article['has_image'] = False
+                print("❌")
+        else:
+            article['has_image'] = False
+    
     # Clean articles for JSON serialization
     for article in top_articles:
         if 'parsed_date' in article:
@@ -290,6 +358,20 @@ def main():
     
     # Save to file
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+    
+    # Clean articles for JSON serialization
+    for article in top_articles:
+        if 'parsed_date' in article:
+            del article['parsed_date']
+        if 'date' in article and hasattr(article['date'], 'isoformat'):
+            article['date'] = article['date'].isoformat()
+    
+    output = {
+        'date': yesterday_str,
+        'generated_at': datetime.now().isoformat(),
+        'articles': top_articles
+    }
+    
     with open(OUTPUT_FILE, 'w') as f:
         json.dump(output, f, indent=2)
     

@@ -125,10 +125,17 @@
       object-fit: cover;
       opacity: 0;
       transition: opacity 0.3s;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
     
     .news-image.loaded {
       opacity: 1;
+    }
+    
+    .news-image.loaded + .news-placeholder {
+      opacity: 0;
     }
     
     .news-placeholder {
@@ -143,6 +150,7 @@
       font-size: 1.5em;
       font-weight: bold;
       color: rgba(255,255,255,0.9);
+      transition: opacity 0.3s;
     }
     
     /* Source-specific gradients */
