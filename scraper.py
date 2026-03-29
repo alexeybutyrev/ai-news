@@ -26,13 +26,19 @@ RSS_FEEDS = [
     {"name": "MIT Tech Review", "url": "https://www.technologyreview.com/feed/", "priority": 1},
     {"name": "VentureBeat", "url": "https://venturebeat.com/feed/", "priority": 1},
     {"name": "Latent Space", "url": "https://latent.space/feed", "priority": 1},
+    {"name": "AlphaSignal", "url": "https://alphasignalai.substack.com/feed", "priority": 1},
     
     # Priority 2 - AI/Tech focused
     {"name": "Wired", "url": "https://www.wired.com/feed/rss", "priority": 2},
     {"name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "priority": 2},
     {"name": "Hugging Face Blog", "url": "https://huggingface.co/blog/feed.xml", "priority": 2},
+    {"name": "DeepMind", "url": "https://deepmind.google/blog/rss.xml", "priority": 2},
     {"name": "Interconnects", "url": "https://www.interconnects.ai/feed", "priority": 2},
     {"name": "The Sequence", "url": "https://thesequence.substack.com/feed", "priority": 2},
+    {"name": "Reuters AI", "url": "https://news.google.com/rss/search?q=when:24h+allinurl:reuters.com+AI&ceid=US:en&hl=en-US&gl=US", "priority": 2},
+    
+    # Priority 3 - General tech with AI coverage
+    {"name": "The Register", "url": "https://www.theregister.com/headlines.atom", "priority": 3},
 ]
 
 class HTMLStripper(HTMLParser):

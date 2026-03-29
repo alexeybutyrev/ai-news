@@ -1,6 +1,6 @@
 {
   "date": "2026-03-28",
-  "generated_at": "2026-03-29T21:32:56.724340",
+  "generated_at": "2026-03-29T21:39:16.203011",
   "articles": [
     {
       "title": "Intercom's new post-trained Fin Apex 1.0 beats GPT-5.4 and Claude Sonnet 4.6 at customer service resolutions",
@@ -78,6 +78,21 @@
       "formatted_date": "March 14, 2026"
     },
     {
+      "title": "Anthropic Releases \"Code Review\" that Lets Claude Dispatch AI agents on GitHub",
+      "url": "https://alphasignalai.substack.com/p/anthropic-releases-code-review-that",
+      "summary": "A fleet of agents reviews every pull request in parallel. Each agent hunts a different class of bug, then a verification step filters out false positives.",
+      "image": "https://substackcdn.com/image/fetch/$s_!TbSX!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5f45568d-6d64-4c1f-8efa-5d8e167e1189_1920x1080.jpeg",
+      "source": "AlphaSignal",
+      "priority": 1,
+      "date": "Wed, 11 Mar 2026 08:25:17 GMT",
+      "has_image": true,
+      "relevance_score": 11.0,
+      "topic": "LLMs",
+      "tldr": "A fleet of agents reviews every pull request in parallel. Each agent hunts a different class of bug, then a verification step filters out false positives..",
+      "importance": "Claude's growth signals demand for AI safety-focused alternatives.",
+      "formatted_date": "March 11, 2026"
+    },
+    {
       "title": "Anthropic\u2019s Claude popularity with paying consumers is skyrocketing",
       "url": "https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/",
       "summary": "Estimates for total Claude consumer users are all over the map (we've seen figures ranging from 18 million to 30 million). Anthropic hasn't disclosed this data, but a spokesperson did tell TechCrunch that Claude paid subscriptions have more than doubled this year.",
@@ -136,21 +151,6 @@
       "tldr": "We thought about this carefully before choosing hyperbole; but it is warranted..",
       "importance": "Claude's growth signals demand for AI safety-focused alternatives.",
       "formatted_date": "March 26, 2026"
-    },
-    {
-      "title": "[AINews] Every Lab serious enough about Developers has bought their own Devtools",
-      "url": "https://www.latent.space/p/ainews-every-lab-serious-enough-about",
-      "summary": "OpenAI buys Astral, Anthropic buys Bun, Google DeepMind bought the Antigravity team.",
-      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/qaJXBMwUkoE",
-      "source": "Latent Space",
-      "priority": 1,
-      "date": "Fri, 20 Mar 2026 07:15:43 GMT",
-      "has_image": true,
-      "relevance_score": 9.0,
-      "topic": "AI News",
-      "tldr": "OpenAI buys Astral, Anthropic buys Bun, Google DeepMind bought the Antigravity team..",
-      "importance": "Claude's growth signals demand for AI safety-focused alternatives.",
-      "formatted_date": "March 20, 2026"
     }
   ]
 }
