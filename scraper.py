@@ -266,24 +266,34 @@ def generate_importance(title: str, summary: str, topic: str) -> str:
     """Generate 1-sentence importance explanation"""
     text = (title + ' ' + summary).lower()
     
-    if 'openai' in text or 'gpt' in text:
-        return "Important for understanding OpenAI's strategy and the competitive AI landscape."
+    if 'intercom' in text or 'fin apex' in text:
+        return "Shows how enterprise AI is evolving beyond general-purpose models."
+    elif 'mistral' in text and ('speech' in text or 'voice' in text or 'tts' in text):
+        return "Open-source voice AI could disrupt the closed-source model market."
     elif 'mistral' in text:
-        return "Shows how OpenAI competitors are differentiating with open-source approaches."
+        return "Mistral's open-source approach challenges OpenAI's dominance."
     elif 'claude' in text or 'anthropic' in text:
-        return "Significant for the AI safety-focused alternative to OpenAI."
+        return "Claude's growth signals demand for AI safety-focused alternatives."
     elif 'gemini' in text or 'google' in text:
-        return "Google's AI developments impact the entire search and cloud ecosystem."
+        return "Google's AI moves impact billions of users across search and cloud."
+    elif 'openai' in text and ('abandon' in text or 'shutdown' in text or 'cancel' in text):
+        return "Reveals OpenAI's shifting priorities and product strategy."
+    elif 'openai' in text and ('chip' in text or 'hardware' in text or 'nvidia' in text):
+        return "Hardware independence could reduce OpenAI's compute costs significantly."
+    elif 'openai' in text:
+        return "Important for understanding the AI market leader's direction."
+    elif 'cohere' in text:
+        return "Enterprise-focused AI models are becoming a distinct market segment."
     elif topic == 'Voice AI':
-        return "Voice AI is becoming a key battleground for AI platforms."
+        return "Voice AI is emerging as a key differentiator for AI platforms."
     elif topic == 'Safety':
-        return "AI safety developments are crucial for responsible AI deployment at scale."
+        return "AI safety developments shape how companies deploy models responsibly."
     elif topic == 'Startups':
-        return "Funding news indicates investor confidence and emerging AI trends."
+        return "Funding trends reveal where investors see AI opportunities."
     elif topic == 'Open Source':
-        return "Open source models are democratizing access to advanced AI capabilities."
+        return "Open-source models democratize access to advanced AI capabilities."
     elif topic == 'Hardware':
-        return "Hardware advances directly impact AI compute costs and accessibility."
+        return "Hardware advances directly affect AI compute costs and availability."
     else:
         return "Relevant for staying current with AI industry developments."
 
