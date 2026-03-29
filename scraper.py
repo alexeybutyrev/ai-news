@@ -247,6 +247,13 @@ def main():
         else:
             article['formatted_date'] = yesterday_str
     
+    # Clean articles for JSON serialization
+    for article in top_articles:
+        if 'parsed_date' in article:
+            del article['parsed_date']
+        if 'date' in article and hasattr(article['date'], 'isoformat'):
+            article['date'] = article['date'].isoformat()
+    
     # Prepare output
     output = {
         'date': yesterday_str,
