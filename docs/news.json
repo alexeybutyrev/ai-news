@@ -1,7 +1,19 @@
 {
   "date": "2026-03-28",
-  "generated_at": "2026-03-29T17:33:16.312214",
+  "generated_at": "2026-03-29T18:52:02.451083",
   "articles": [
+    {
+      "title": "Intercom's new post-trained Fin Apex 1.0 beats GPT-5.4 and Claude Sonnet 4.6 at customer service resolutions",
+      "url": "https://venturebeat.com/technology/intercoms-new-post-trained-fin-apex-1-0-beats-gpt-5-4-and-claude-sonnet-4-6",
+      "summary": "Intercom is taking an unusual gamble for a legacy software company: building its own AI model.The 15-year-old massive customer service platform announced Fin Apex 1.0 on Thursday, a small, purpose-built AI model that the company claims outperforms leading frontier models from OpenAI and Anthropic on the metrics that matter most for customer support. The model powers Intercom's existing Fin AI agent, which already handles over two million customer conversations weekly.According to benchmarks shar",
+      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/1m6rKtRFpu30IlvdBGT0uL/3a0c0efdce3d96ba7972bc29acfeea9b/Gemini_Generated_Image_.png?w=300&q=30",
+      "source": "VentureBeat",
+      "priority": 2,
+      "date": "Thu, 26 Mar 2026 16:16:00 GMT",
+      "relevance_score": 11.5,
+      "tldr": "Intercom is taking an unusual gamble for a legacy software company: building its own AI model.The 15-year-old massive customer service platform announced Fin Apex 1.0 on Thursday, a small, purpose-built AI model that the company claims outperforms leading frontier models from OpenAI and Anthropic on the metrics that matter most for customer support. The model powers Intercom's existing Fin AI agent, which already handles over two million customer conversations weekly.According to benchmarks shar.",
+      "formatted_date": "March 26, 2026"
+    },
     {
       "title": "OpenAI abandons yet another side quest: ChatGPT\u2019s erotic mode",
       "url": "https://techcrunch.com/2026/03/26/openai-abandons-yet-another-side-quest-chatgpts-erotic-mode/",
@@ -15,6 +27,30 @@
       "formatted_date": "March 26, 2026"
     },
     {
+      "title": "Mistral AI just released a text-to-speech model it says beats ElevenLabs \u2014 and it's giving away the weights for free",
+      "url": "https://venturebeat.com/orchestration/mistral-ai-just-released-a-text-to-speech-model-it-says-beats-elevenlabs-and",
+      "summary": "The enterprise voice AI market is in the middle of a land grab. ElevenLabs and IBM announced a collaboration just this week to bring premium voice capabilities into IBM's watsonx Orchestrate platform. Google Cloud has been expanding its Chirp 3 HD voices. OpenAI continues to iterate on its own speech synthesis. And the market underpinning all of this activity is enormous \u2014 voice AI crossed $22 billion globally in 2026, with the voice AI agents segment alone projected to reach $47.5 billion by 20",
+      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/72D5HGgYf4s3Pux8zzbC4I/dce882939be8e43c79c3fe9baf9a5400/nuneybits_Vector_art_of_burnt_orange_voice_waves_rising_from_a__b4e149ce-8692-4f29-8c57-9d1ac9c21a08.webp?w=300&q=30",
+      "source": "VentureBeat",
+      "priority": 2,
+      "date": "Thu, 26 Mar 2026 11:30:00 GMT",
+      "relevance_score": 7.5,
+      "tldr": "The enterprise voice AI market is in the middle of a land grab. ElevenLabs and IBM announced a collaboration just this week to bring premium voice capabilities into IBM's watsonx Orchestrate platform.",
+      "formatted_date": "March 26, 2026"
+    },
+    {
+      "title": "I Asked ChatGPT 500 Questions. Here Are the Ads I Saw Most Often",
+      "url": "https://www.wired.com/story/i-asked-chatgpt-500-questions-here-are-the-ads-i-saw-most-often/",
+      "summary": "Ads are rolling out across the US on ChatGPT\u2019s free tier. I asked OpenAI's bot 500 questions to see what these ads were like and how they related to my prompts.",
+      "image": "https://via.placeholder.com/400x200?text=AI+News",
+      "source": "Wired",
+      "priority": 2,
+      "date": "Fri, 27 Mar 2026 10:30:00 +0000",
+      "relevance_score": 6.5,
+      "tldr": "Ads are rolling out across the US on ChatGPT\u2019s free tier. I asked OpenAI's bot 500 questions to see what these ads were like and how they related to my prompts..",
+      "formatted_date": "March 27, 2026"
+    },
+    {
       "title": "Mistral releases a new open source model for speech generation",
       "url": "https://techcrunch.com/2026/03/26/mistral-releases-a-new-open-source-model-for-speech-generation/",
       "summary": "The model, which lets enterprises build voice agents for sales and customer engagement, puts Mistral in direct competition with the likes of ElevenLabs, Deepgram, and OpenAI.",
@@ -24,42 +60,6 @@
       "date": "Thu, 26 Mar 2026 11:30:00 +0000",
       "relevance_score": 6.0,
       "tldr": "The model, which lets enterprises build voice agents for sales and customer engagement, puts Mistral in direct competition with the likes of ElevenLabs, Deepgram, and OpenAI..",
-      "formatted_date": "March 26, 2026"
-    },
-    {
-      "title": "OpenAI sidesteps Nvidia with unusually fast coding model on plate-sized chips",
-      "url": "https://arstechnica.com/ai/2026/02/openai-sidesteps-nvidia-with-unusually-fast-coding-model-on-plate-sized-chips/",
-      "summary": "\n                        OpenAI's new GPT\u20115.3\u2011Codex\u2011Spark is 15 times faster at coding than its predecessor.\n                    ",
-      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/02/GettyImages-2225076517_resize-1152x648.jpg",
-      "source": "Ars Technica",
-      "priority": 2,
-      "date": "Thu, 12 Feb 2026 22:56:02 +0000",
-      "relevance_score": 5.5,
-      "tldr": "\n                        OpenAI's new GPT\u20115.3\u2011Codex\u2011Spark is 15 times faster at coding than its predecessor.\n                    .",
-      "formatted_date": "February 12, 2026"
-    },
-    {
-      "title": "Anthropic\u2019s Claude popularity with paying consumers is skyrocketing",
-      "url": "https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/",
-      "summary": "Estimates for total Claude consumer users are all over the map (we've seen figures ranging from 18 million to 30 million). Anthropic hasn't disclosed this data, but a spokesperson did tell TechCrunch that Claude paid subscriptions have more than doubled this year.",
-      "image": "https://via.placeholder.com/400x200?text=AI+News",
-      "source": "TechCrunch AI",
-      "priority": 1,
-      "date": "Sat, 28 Mar 2026 14:15:00 +0000",
-      "relevance_score": 5.0,
-      "tldr": "Estimates for total Claude consumer users are all over the map (we've seen figures ranging from 18 million to 30 million). Anthropic hasn't disclosed this data, but a spokesperson did tell TechCrunch that Claude paid subscriptions have more than doubled this year..",
-      "formatted_date": "March 28, 2026"
-    },
-    {
-      "title": "You can now transfer your chats and personal information from other chatbots directly into Gemini",
-      "url": "https://techcrunch.com/2026/03/26/you-can-now-transfer-your-chats-and-personal-information-from-other-chatbots-directly-into-gemini/",
-      "summary": "Google is launching \"switching tools\" that, just as it sounds, will make it easier for users of other chatbots to switch to Gemini. ",
-      "image": "https://via.placeholder.com/400x200?text=AI+News",
-      "source": "TechCrunch AI",
-      "priority": 1,
-      "date": "Thu, 26 Mar 2026 23:47:56 +0000",
-      "relevance_score": 5.0,
-      "tldr": "Google is launching \"switching tools\" that, just as it sounds, will make it easier for users of other chatbots to switch to Gemini. .",
       "formatted_date": "March 26, 2026"
     }
   ]
