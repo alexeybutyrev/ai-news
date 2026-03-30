@@ -450,13 +450,16 @@ def main():
         print(f"   ⚠️ Only {len(relevant_articles)} AI-related from yesterday, expanding to 7 days...")
         seven_days_ago = datetime.now() - timedelta(days=7)
         for article in all_articles:
-            if article['date'] and article not in dated_articles:
-                article_date = parse_date(article['date'])
-                if article_date and article_date >= seven_days_ago:
-                    article['parsed_date'] = article_date
-                    article['relevance_score'] = calculate_relevance_score(article)
-                    if is_truly_ai_related(article):
-                        relevant_articles.append(article)
+            try:
+                if article not in dated_articles and article.get('date'):
+                    article_date = parse_date(article['date'])
+                    if article_date and article_date >= seven_days_ago:
+                        article['parsed_date'] = article_date
+                        article['relevance_score'] = calculate_relevance_score(article)
+                        if is_truly_ai_related(article):
+                            relevant_articles.append(article)
+            except Exception as e:
+                continue  # Skip problematic articles
         relevant_articles.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
         print(f"   📅 After expansion: {len(relevant_articles)} AI-related articles")
     
