@@ -433,19 +433,20 @@ def main():
     # Sort by relevance score
     dated_articles.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
     
-    # Limit to max 2 articles per source for diversity
+    # Limit to max 2 articles per source for diversity (relax to 3 if needed)
     source_counts = {}
     diverse_articles = []
     for article in dated_articles:
         source = article.get('source', 'Unknown')
-        if source_counts.get(source, 0) < 2:
+        max_per_source = 3 if len(dated_articles) < 10 else 2
+        if source_counts.get(source, 0) < max_per_source:
             diverse_articles.append(article)
             source_counts[source] = source_counts.get(source, 0) + 1
     
-    # Always return at least 5 articles (or as many as available)
-    top_articles = diverse_articles[:max(5, min(len(diverse_articles), 10))]
+    # Take up to 10 articles
+    top_articles = diverse_articles[:min(len(diverse_articles), 10)]
     
-    print(f"\n🎯 Top {len(top_articles)} articles selected")
+    print(f"\n🎯 Top {len(top_articles)} articles selected (from {len(dated_articles)} after date filter)")
     
     # Generate TLDR and importance for each
     print("\n✨ Generating summaries...")
