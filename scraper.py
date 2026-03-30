@@ -434,11 +434,9 @@ def main():
     dated_articles.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
     
     # Filter out low-relevance articles (not really AI-related)
-    # Require at least 3.0 relevance OR match high-value keywords
     def is_truly_ai_related(article):
         score = article.get('relevance_score', 0)
         text = (article.get('title', '') + ' ' + article.get('summary', '')).lower()
-        # Must have AI-specific keywords to be included
         ai_keywords = ['openai', 'gpt', 'chatgpt', 'claude', 'anthropic', 'gemini', 'llm', 
                        'ai model', 'artificial intelligence', 'machine learning', 'deep learning',
                        'neural network', 'mistral', 'transformer', 'generative ai', 'sora', 'midjourney']
@@ -446,6 +444,21 @@ def main():
         return score >= 5.0 or (score >= 3.0 and has_ai_keyword)
     
     relevant_articles = [a for a in dated_articles if is_truly_ai_related(a)]
+    
+    # If fewer than 5 AI articles, expand to last 7 days
+    if len(relevant_articles) < 5:
+        print(f"   ⚠️ Only {len(relevant_articles)} AI-related from yesterday, expanding to 7 days...")
+        seven_days_ago = datetime.now() - timedelta(days=7)
+        for article in all_articles:
+            if article['date'] and article not in dated_articles:
+                article_date = parse_date(article['date'])
+                if article_date and article_date >= seven_days_ago:
+                    article['parsed_date'] = article_date
+                    article['relevance_score'] = calculate_relevance_score(article)
+                    if is_truly_ai_related(article):
+                        relevant_articles.append(article)
+        relevant_articles.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
+        print(f"   📅 After expansion: {len(relevant_articles)} AI-related articles")
     
     # Limit to max 2 articles per source for diversity (relax to 3 if needed)
     source_counts = {}
