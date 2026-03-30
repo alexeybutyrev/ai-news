@@ -434,11 +434,18 @@ def main():
     dated_articles.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
     
     # Filter out low-relevance articles (not really AI-related)
-    relevant_articles = [a for a in dated_articles if a.get('relevance_score', 0) >= 3.0]
+    # Require at least 3.0 relevance OR match high-value keywords
+    def is_truly_ai_related(article):
+        score = article.get('relevance_score', 0)
+        text = (article.get('title', '') + ' ' + article.get('summary', '')).lower()
+        # Must have AI-specific keywords to be included
+        ai_keywords = ['openai', 'gpt', 'chatgpt', 'claude', 'anthropic', 'gemini', 'llm', 
+                       'ai model', 'artificial intelligence', 'machine learning', 'deep learning',
+                       'neural network', 'mistral', 'transformer', 'generative ai', 'sora', 'midjourney']
+        has_ai_keyword = any(kw in text for kw in ai_keywords)
+        return score >= 5.0 or (score >= 3.0 and has_ai_keyword)
     
-    # If we don't have enough, lower threshold to 2.0
-    if len(relevant_articles) < 5:
-        relevant_articles = [a for a in dated_articles if a.get('relevance_score', 0) >= 2.0]
+    relevant_articles = [a for a in dated_articles if is_truly_ai_related(a)]
     
     # Limit to max 2 articles per source for diversity (relax to 3 if needed)
     source_counts = {}
@@ -453,7 +460,7 @@ def main():
     # Take up to 10 articles
     top_articles = diverse_articles[:min(len(diverse_articles), 10)]
     
-    print(f"\n🎯 Top {len(top_articles)} articles selected (from {len(relevant_articles)} with relevance ≥ 2.0)")
+    print(f"\n🎯 Top {len(top_articles)} articles selected (from {len(relevant_articles)} AI-related)")
     
     # Generate TLDR and importance for each
     print("\n✨ Generating summaries...")
