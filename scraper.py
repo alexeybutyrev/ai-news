@@ -433,12 +433,19 @@ def main():
     # Sort by relevance score
     dated_articles.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
     
+    # Filter out low-relevance articles (not really AI-related)
+    relevant_articles = [a for a in dated_articles if a.get('relevance_score', 0) >= 3.0]
+    
+    # If we don't have enough, lower threshold to 2.0
+    if len(relevant_articles) < 5:
+        relevant_articles = [a for a in dated_articles if a.get('relevance_score', 0) >= 2.0]
+    
     # Limit to max 2 articles per source for diversity (relax to 3 if needed)
     source_counts = {}
     diverse_articles = []
-    for article in dated_articles:
+    for article in relevant_articles:
         source = article.get('source', 'Unknown')
-        max_per_source = 3 if len(dated_articles) < 10 else 2
+        max_per_source = 3 if len(relevant_articles) < 10 else 2
         if source_counts.get(source, 0) < max_per_source:
             diverse_articles.append(article)
             source_counts[source] = source_counts.get(source, 0) + 1
@@ -446,7 +453,7 @@ def main():
     # Take up to 10 articles
     top_articles = diverse_articles[:min(len(diverse_articles), 10)]
     
-    print(f"\n🎯 Top {len(top_articles)} articles selected (from {len(dated_articles)} after date filter)")
+    print(f"\n🎯 Top {len(top_articles)} articles selected (from {len(relevant_articles)} with relevance ≥ 2.0)")
     
     # Generate TLDR and importance for each
     print("\n✨ Generating summaries...")
