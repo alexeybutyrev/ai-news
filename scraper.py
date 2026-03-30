@@ -15,10 +15,11 @@ from html.parser import HTMLParser
 import hashlib
 import ssl
 
-# Configuration
-OUTPUT_FILE = "/home/node/.openclaw/workspace/ai-news/docs/news.json"
-REPO_DIR = "/home/node/.openclaw/workspace/ai-news"
-IMAGES_DIR = "/home/node/.openclaw/workspace/ai-news/docs/images"
+# Configuration - Use relative paths that work in both local and CI environments
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_FILE = os.path.join(SCRIPT_DIR, "docs", "news.json")
+REPO_DIR = SCRIPT_DIR
+IMAGES_DIR = os.path.join(SCRIPT_DIR, "docs", "images")
 
 RSS_FEEDS = [
     # Priority 1 - AI-specific, highest relevance
