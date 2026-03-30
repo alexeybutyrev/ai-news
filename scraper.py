@@ -503,28 +503,16 @@ def main():
         if 'date' in article and hasattr(article['date'], 'isoformat'):
             article['date'] = article['date'].isoformat()
     
-    # Prepare output
+    # Prepare output - use today's date as the publication date
+    today_str = datetime.now().strftime('%Y-%m-%d')
     output = {
-        'date': yesterday_str,
+        'date': today_str,
         'generated_at': datetime.now().isoformat(),
         'articles': top_articles
     }
     
     # Save to file
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-    
-    # Clean articles for JSON serialization
-    for article in top_articles:
-        if 'parsed_date' in article:
-            del article['parsed_date']
-        if 'date' in article and hasattr(article['date'], 'isoformat'):
-            article['date'] = article['date'].isoformat()
-    
-    output = {
-        'date': yesterday_str,
-        'generated_at': datetime.now().isoformat(),
-        'articles': top_articles
-    }
     
     with open(OUTPUT_FILE, 'w') as f:
         json.dump(output, f, indent=2)
