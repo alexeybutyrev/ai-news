@@ -1,6 +1,6 @@
 {
   "date": "2026-03-29",
-  "generated_at": "2026-03-30T14:14:35.165002",
+  "generated_at": "2026-03-30T14:22:54.618034",
   "articles": [
     {
       "title": "Sora\u2019s shutdown could be a reality check moment for AI video",
@@ -60,6 +60,21 @@
       "topic": "Startups",
       "tldr": "The incidents in Austin raise questions about how self-driving cars \u201clearn\u201d and adapt to their surroundings. Relevant for understanding current AI trends.",
       "importance": "Funding trends reveal where investors see AI opportunities.",
+      "formatted_date": "March 29, 2026"
+    },
+    {
+      "title": "Best Noise-Canceling Earbuds: Bose, Sony, Apple, and More",
+      "url": "https://www.wired.com/gallery/best-noise-canceling-earbuds/",
+      "summary": "Everyone needs a good pair of ANC earbuds. These are the best of the bunch.",
+      "image": null,
+      "source": "Wired",
+      "priority": 2,
+      "date": "Sun, 29 Mar 2026 10:30:00 +0000",
+      "has_image": false,
+      "relevance_score": 2.0,
+      "topic": "AI News",
+      "tldr": "A strategic pivot reveals changing priorities. This signals a shift in the company's AI direction.",
+      "importance": "Relevant for staying current with AI industry developments.",
       "formatted_date": "March 29, 2026"
     }
   ]
