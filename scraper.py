@@ -394,6 +394,15 @@ def main():
     
     print(f"\n📊 Total articles: {len(all_articles)}")
     
+    # Show per-source article counts
+    source_counts_raw = {}
+    for article in all_articles:
+        source = article.get('source', 'Unknown')
+        source_counts_raw[source] = source_counts_raw.get(source, 0) + 1
+    print("\n📈 Articles per source:")
+    for source, count in sorted(source_counts_raw.items(), key=lambda x: -x[1]):
+        print(f"   {source}: {count}")
+    
     # Filter by date (yesterday) and calculate relevance
     dated_articles = []
     for article in all_articles:
@@ -406,17 +415,20 @@ def main():
                 if is_yesterday(article_date):
                     dated_articles.append(article)
     
-    # If no articles from yesterday, fall back to last 3 days
+    print(f"\n📅 Articles from yesterday: {len(dated_articles)}")
+    
+    # If fewer than 5 articles from yesterday, expand to last 7 days
     if len(dated_articles) < 5:
-        print(f"   Only {len(dated_articles)} articles from yesterday, including last 3 days...")
-        three_days_ago = datetime.now() - timedelta(days=3)
+        print(f"   ⚠️ Only {len(dated_articles)} from yesterday, expanding to last 7 days...")
+        seven_days_ago = datetime.now() - timedelta(days=7)
         for article in all_articles:
             if article['date'] and article not in dated_articles:
                 article_date = parse_date(article['date'])
-                if article_date and article_date >= three_days_ago:
+                if article_date and article_date >= seven_days_ago:
                     article['parsed_date'] = article_date
                     article['relevance_score'] = calculate_relevance_score(article)
                     dated_articles.append(article)
+        print(f"   📅 After expansion: {len(dated_articles)} articles")
     
     # Sort by relevance score
     dated_articles.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
@@ -430,8 +442,8 @@ def main():
             diverse_articles.append(article)
             source_counts[source] = source_counts.get(source, 0) + 1
     
-    # Get top 10 from diverse list
-    top_articles = diverse_articles[:10]
+    # Always return at least 5 articles (or as many as available)
+    top_articles = diverse_articles[:max(5, min(len(diverse_articles), 10))]
     
     print(f"\n🎯 Top {len(top_articles)} articles selected")
     
