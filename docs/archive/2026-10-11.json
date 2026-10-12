@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-12",
+  "generated_at": "2026-10-12T15:07:45.165660",
+  "articles": [
+    {
+      "title": "[AINews] Claude Haiku 5.5 \u2014 better than GPT-6 Luna at the same pricing",
+      "url": "https://www.latent.space/p/ainews-claude-haiku-55-better-than",
+      "summary": "yay small models",
+      "image": "https://substackcdn.com/image/fetch/$s_!q_iv!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fmedia%2FHUDOG1Jb0AAHQ2I.jpg",
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Thu, 08 Oct 2026 07:27:51 GMT",
+      "has_image": true,
+      "relevance_score": 10.0,
+      "topic": "LLMs",
+      "tldr": "This article covers [ainews] claude haiku 5.5 \u2014 better than gpt-6 luna at the same pricing. Important for staying current with AI developments.",
+      "importance": "Claude's growth signals demand for AI safety-focused alternatives.",
+      "formatted_date": "October 08, 2026"
+    },
+    {
+      "title": "These execs think voice AI hasn\u2019t reached its ChatGPT moment yet",
+      "url": "https://techcrunch.com/2026/10/11/these-execs-think-voice-ai-hasnt-reached-its-chatgpt-moment-yet/",
+      "summary": "Voice AI often misses important points for its context layer, and causes the whole pipeline to break.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sun, 11 Oct 2026 14:00:00 +0000",
+      "has_image": false,
+      "relevance_score": 9.0,
+      "topic": "LLMs",
+      "tldr": "Voice AI often misses important points for its context layer, and causes the whole pipeline to break. Relevant for understanding current AI trends.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "October 11, 2026"
+    },
+    {
+      "title": "Will the HomeView be Apple\u2019s first smart home success?",
+      "url": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/",
+      "summary": "Over the past couple of years, we\u2019ve seen multiple reports that Apple was working on a new smart home product, but now it seems the product has a name and a launch date.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sun, 11 Oct 2026 21:14:40 +0000",
+      "has_image": false,
+      "relevance_score": 7.0,
+      "topic": "Startups",
+      "tldr": "Over the past couple of years, we\u2019ve seen multiple reports that Apple was working on a new smart home product, but now it seems the product has a name and a launch date. Relevant for understanding current AI trends.",
+      "importance": "Funding trends reveal where investors see AI opportunities.",
+      "formatted_date": "October 11, 2026"
+    },
+    {
+      "title": "[AINews] TypeSafe/Jev at >$100M ARR, $7.5B valuation 3 weeks after launch",
+      "url": "https://www.latent.space/p/ainews-typesafejev-at-100m-arr-75b",
+      "summary": "Wow.",
+      "image": "https://substackcdn.com/image/fetch/$s_!JxMf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F__ss-rehost__tw-video-preview-13_2108594586310631424.jpg",
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Sat, 10 Oct 2026 06:45:57 GMT",
+      "has_image": true,
+      "relevance_score": 7.0,
+      "topic": "Startups",
+      "tldr": "This article covers [ainews] typesafe/jev at >$100m arr, $7.5b valuation 3 weeks after launch. Important for staying current with AI developments.",
+      "importance": "Funding trends reveal where investors see AI opportunities.",
+      "formatted_date": "October 10, 2026"
+    }
+  ]
+}
