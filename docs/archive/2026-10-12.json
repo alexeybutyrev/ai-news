@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-13",
+  "generated_at": "2026-10-13T14:00:30.729520",
+  "articles": [
+    {
+      "title": "How Anthropic\u2019s Dynamic Workflows Coordinate Claude Agents",
+      "url": "https://www.latent.space/p/claude-dynamic-workflows",
+      "summary": "At AI Engineer New York, Anthropic drew on lessons from Unix and Linux to explain how agents can tackle bigger projects without overwhelming developers.",
+      "image": "https://substack-post-media.s3.amazonaws.com/public/images/dda42c05-6ce1-4e54-b544-f7d1557f04b2_1280x720.jpeg",
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Mon, 12 Oct 2026 18:18:17 GMT",
+      "has_image": true,
+      "relevance_score": 9.0,
+      "topic": "LLMs",
+      "tldr": "At AI Engineer New York, Anthropic drew on lessons from Unix and Linux to explain how agents can tackle bigger projects without overwhelming developers. Relevant for understanding current AI trends.",
+      "importance": "Claude's growth signals demand for AI safety-focused alternatives.",
+      "formatted_date": "October 12, 2026"
+    },
+    {
+      "title": "Meta releases its first frontier model, Muse Wonder",
+      "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+      "summary": "Where Muse Spark aimed to be a lightweight model that could perform at low latency, the Wonder models are larger and said to be more capable, with higher benchmark scores and better results on complex tasks like coding.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Mon, 12 Oct 2026 17:56:56 +0000",
+      "has_image": false,
+      "relevance_score": 8.0,
+      "topic": "AI News",
+      "tldr": "Where Muse Spark aimed to be a lightweight model that could perform at low latency, the Wonder models are larger and said to be more capable, with higher benchmark scores and better results on complex tasks like coding. Relevant for understanding current AI trends.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "October 12, 2026"
+    },
+    {
+      "title": "WindBorne wins a hefty US Air Force contract for its balloon data",
+      "url": "https://techcrunch.com/2026/10/12/windborne-wins-a-hefty-us-air-force-contract-for-its-balloon-data/",
+      "summary": "A Silicon Valley startup that uses weather balloons and AI to predict the weather won a U.S. military contract worth almost $50 million.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Mon, 12 Oct 2026 17:19:14 +0000",
+      "has_image": false,
+      "relevance_score": 6.0,
+      "topic": "Startups",
+      "tldr": "A Silicon Valley startup that uses weather balloons and AI to predict the weather won a U.S. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Funding trends reveal where investors see AI opportunities.",
+      "formatted_date": "October 12, 2026"
+    },
+    {
+      "title": "The Download: moon city problems and drone traffic controllers",
+      "url": "https://www.technologyreview.com/2026/10/12/1146376/the-download-moon-city-drone-air-traffic-controllers/",
+      "summary": "This is today\u2019s edition of The Download, our weekday newsletter that provides a daily dose of what\u2019s going on in the world of technology. Mars may be a hellhole, but the moon is not far behind The US and China are racing to build bases on the moon, with NASA hoping to establish a small\u2026",
+      "image": null,
+      "source": "MIT Tech Review",
+      "priority": 1,
+      "date": "Mon, 12 Oct 2026 12:10:00 +0000",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "AI News",
+      "tldr": "This is today\u2019s edition of The Download, our weekday newsletter that provides a daily dose of what\u2019s going on in the world of technology. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "October 12, 2026"
+    },
+    {
+      "title": "Mars may be a hellhole, but the moon is not far behind",
+      "url": "https://www.technologyreview.com/2026/10/12/1145760/imagining-building-cities-on-the-moon/",
+      "summary": "Welcome to the second space race. You can be forgiven for experiencing d\u00e9j\u00e0 vu. Last time, it was the Soviet Union and the United States vying to be the first to plant some flags. Now it\u2019s a sprint to the lunar surface between America and China\u2014alongside a host of varyingly friendly and rival nations\u2014plus a\u2026",
+      "image": "https://wp.technologyreview.com/wp-content/uploads/2026/10/Selman-MIT-MoonBase-LavaCaves.png?w=840",
+      "source": "MIT Tech Review",
+      "priority": 1,
+      "date": "Mon, 12 Oct 2026 09:37:02 +0000",
+      "has_image": true,
+      "relevance_score": 5.0,
+      "topic": "AI News",
+      "tldr": "Welcome to the second space race. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "October 12, 2026"
+    }
+  ]
+}
