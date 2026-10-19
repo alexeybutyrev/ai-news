@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-19",
+  "generated_at": "2026-10-19T12:50:49.136938",
+  "articles": [
+    {
+      "title": "Crossing the Threshold: How OpenAI and Anthropic Approach Autonomy and Safety in Financial Agents",
+      "url": "https://www.latent.space/p/crossing-the-threshold",
+      "summary": "At AI Engineer New York, frontier labs and financial firms explored how to give agents useful autonomy while keeping consequential decisions under control.",
+      "image": "https://substackcdn.com/image/fetch/$s_!rtS2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4aa91ce4-8821-4844-aa0f-56d4bd3c8d7e_1280x720.jpeg",
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Wed, 14 Oct 2026 21:40:52 GMT",
+      "has_image": true,
+      "relevance_score": 9.0,
+      "topic": "Safety",
+      "tldr": "At AI Engineer New York, frontier labs and financial firms explored how to give agents useful autonomy while keeping consequential decisions under control. Relevant for understanding current AI trends.",
+      "importance": "Claude's growth signals demand for AI safety-focused alternatives.",
+      "formatted_date": "October 14, 2026"
+    },
+    {
+      "title": "How Anthropic\u2019s Dynamic Workflows Coordinate Claude Agents (Updated with video!)",
+      "url": "https://www.latent.space/p/claude-dynamic-workflows",
+      "summary": "At AI Engineer New York, Anthropic drew on lessons from Unix and Linux to explain how agents can tackle bigger projects without overwhelming developers.",
+      "image": "https://substack-post-media.s3.amazonaws.com/public/images/dda42c05-6ce1-4e54-b544-f7d1557f04b2_1280x720.jpeg",
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Mon, 12 Oct 2026 18:18:17 GMT",
+      "has_image": true,
+      "relevance_score": 9.0,
+      "topic": "LLMs",
+      "tldr": "At AI Engineer New York, Anthropic drew on lessons from Unix and Linux to explain how agents can tackle bigger projects without overwhelming developers. Relevant for understanding current AI trends.",
+      "importance": "Claude's growth signals demand for AI safety-focused alternatives.",
+      "formatted_date": "October 12, 2026"
+    },
+    {
+      "title": "Anthropic says it\u2019s committing 5% of its shares to a \u2018public benefit fund\u2019",
+      "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/",
+      "summary": "Anthropic said that it will commit 5% of its shares to the fund.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sun, 18 Oct 2026 20:37:40 +0000",
+      "has_image": false,
+      "relevance_score": 7.0,
+      "topic": "AI News",
+      "tldr": "Anthropic said that it will commit 5% of its shares to the fund. Relevant for understanding current AI trends.",
+      "importance": "Claude's growth signals demand for AI safety-focused alternatives.",
+      "formatted_date": "October 18, 2026"
+    },
+    {
+      "title": "Disney agrees to hire the majority of Character.AI\u2019s workforce",
+      "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/",
+      "summary": "The filing also says that the \u201cvast majority\u201d of Character.AI employees who were offered jobs at Disney accepted them. However, this is a stalking horse bid, so another company could come forward with a higher offer.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sun, 18 Oct 2026 16:30:00 +0000",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "AI News",
+      "tldr": "The filing also says that the \u201cvast majority\u201d of Character.AI employees who were offered jobs at Disney accepted them. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "October 18, 2026"
+    }
+  ]
+}
