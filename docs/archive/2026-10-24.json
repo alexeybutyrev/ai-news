@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-25",
+  "generated_at": "2026-10-25T11:09:15.732261",
+  "articles": [
+    {
+      "title": "The AI graveyard: a running list of projects and startups that didn\u2019t make it",
+      "url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+      "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sat, 24 Oct 2026 19:00:00 +0000",
+      "has_image": false,
+      "relevance_score": 10.0,
+      "topic": "Startups",
+      "tldr": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations. Relevant for understanding current AI trends.",
+      "importance": "Important for understanding the AI market leader's direction.",
+      "formatted_date": "October 24, 2026"
+    },
+    {
+      "title": "Forced to pick, Grok\u2019s AI model chooses Republicans. OpenAI\u2019s picks Democrats.\u00a0",
+      "url": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+      "summary": "A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sat, 24 Oct 2026 15:00:00 +0000",
+      "has_image": false,
+      "relevance_score": 10.0,
+      "topic": "LLMs",
+      "tldr": "A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races. Relevant for understanding current AI trends.",
+      "importance": "Important for understanding the AI market leader's direction.",
+      "formatted_date": "October 24, 2026"
+    },
+    {
+      "title": "Block\u2019s new voice model sounds eerily human",
+      "url": "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/",
+      "summary": "Block said that the voice model can run locally on a MacBook M4 Max",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sat, 24 Oct 2026 16:00:00 +0000",
+      "has_image": false,
+      "relevance_score": 6.0,
+      "topic": "Voice AI",
+      "tldr": "Block said that the voice model can run locally on a MacBook M4 Max Relevant for understanding current AI trends.",
+      "importance": "Voice AI is emerging as a key differentiator for AI platforms.",
+      "formatted_date": "October 24, 2026"
+    },
+    {
+      "title": "[AINews] Kimi 3.1 Pro 104BA-2.8T: Fable-5.1-Class Open Weights narrows Closed-AI lead to 1 month... and Pro Highspeed API with 2-3\u00d7 speed",
+      "url": "https://latent.space/p/ainews-kimi-31/",
+      "summary": "We have Fable at home... or so we are being told by paid shills",
+      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/dfd0bf38-4197-4d9c-90d9-5d8f18b60e7d/image.png?t=1792825473",
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Sat, 24 Oct 2026 07:18:29 GMT",
+      "has_image": true,
+      "relevance_score": 5.0,
+      "topic": "AI News",
+      "tldr": "We have Fable at home... This development highlights the rapidly evolving AI landscape.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "October 24, 2026"
+    }
+  ]
+}
