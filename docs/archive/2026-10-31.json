@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-01",
+  "generated_at": "2026-11-01T13:05:12.008931",
+  "articles": [
+    {
+      "title": "OpenAI reportedly lowers funding target for new round",
+      "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/",
+      "summary": "OpenAI\u2019s latest funding round doesn't seem to be living up to expectations.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sat, 31 Oct 2026 16:12:55 +0000",
+      "has_image": false,
+      "relevance_score": 7.0,
+      "topic": "Startups",
+      "tldr": "OpenAI\u2019s latest funding round doesn't seem to be living up to expectations. Relevant for understanding current AI trends.",
+      "importance": "Important for understanding the AI market leader's direction.",
+      "formatted_date": "October 31, 2026"
+    },
+    {
+      "title": "4 days left: How TechCrunch Founder Summit helps you make more useful connections to scale",
+      "url": "https://techcrunch.com/2026/10/31/4-days-left-how-techcrunch-founder-summit-helps-you-make-more-useful-connections-to-scale/",
+      "summary": "On November 4 at Boston\u2019s SoWa Power Station, get ready for a full day packed with meaningful networking opportunities, actionable insights, and connections that could change the trajectory of your idea and startup. Register before all prices go up at the door.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sat, 31 Oct 2026 21:36:07 +0000",
+      "has_image": false,
+      "relevance_score": 6.0,
+      "topic": "Startups",
+      "tldr": "On November 4 at Boston\u2019s SoWa Power Station, get ready for a full day packed with meaningful networking opportunities, actionable insights, and connections that could change the trajectory of your idea and startup. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Funding trends reveal where investors see AI opportunities.",
+      "formatted_date": "October 31, 2026"
+    },
+    {
+      "title": "Apple CEO says the company doesn\u2019t \u2018want to ship AI for AI\u2019s sake\u2019",
+      "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
+      "summary": "Apple's new CEO defended the company's current position in the AI landscape.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sat, 31 Oct 2026 21:41:00 +0000",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "AI News",
+      "tldr": "Apple's new CEO defended the company's current position in the AI landscape. Relevant for understanding current AI trends.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "October 31, 2026"
+    },
+    {
+      "title": "Agents Prompt People: Using Agents for Long-Horizon Financial Work",
+      "url": "https://latent.space/p/arca/",
+      "summary": "Arca's head of AI discusses persistent memory, the benefits of a custom harness, and agentic workflows that span days.",
+      "image": null,
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Sat, 31 Oct 2026 16:05:00 GMT",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "AI News",
+      "tldr": "Arca's head of AI discusses persistent memory, the benefits of a custom harness, and agentic workflows that span days. Relevant for understanding current AI trends.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "October 31, 2026"
+    },
+    {
+      "title": "[AINews] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?",
+      "url": "https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/",
+      "summary": "It turns out you cannot have your cake AND eat it",
+      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/cece9afa-b4ba-4192-b99d-a11dd657ec0e/image.png?t=1793422657",
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Sat, 31 Oct 2026 05:00:48 GMT",
+      "has_image": true,
+      "relevance_score": 5.0,
+      "topic": "AI News",
+      "tldr": "It turns out you cannot have your cake AND eat it Relevant for understanding current AI trends.",
+      "importance": "Google's AI moves impact billions of users across search and cloud.",
+      "formatted_date": "October 31, 2026"
+    }
+  ]
+}
