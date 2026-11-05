@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-05",
+  "generated_at": "2026-11-05T14:28:01.412041",
+  "articles": [
+    {
+      "title": "Open source AI is booming. Hugging Face explains who profits.",
+      "url": "https://techcrunch.com/video/open-source-ai-is-booming-hugging-face-explains-who-profits/",
+      "summary": "Open source models are becoming more mainstream as enterprises, governments and startups alike rely on the promise of lower costs, more control, and more flexibility. But as increasingly capable models become more freely available, how do companies capture value? And with Chinese open models gaining ground, can American players keep up?\u00a0 On this episode of [\u2026]",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Wed, 04 Nov 2026 19:30:04 +0000",
+      "has_image": false,
+      "relevance_score": 8.0,
+      "topic": "Startups",
+      "tldr": "Open source models are becoming more mainstream as enterprises, governments and startups alike rely on the promise of lower costs, more control, and more flexibility. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Funding trends reveal where investors see AI opportunities.",
+      "formatted_date": "November 04, 2026"
+    },
+    {
+      "title": "Building on open source AI? Hugging Face\u2019s policy chief on the costs, risks, and trade-offs",
+      "url": "https://techcrunch.com/podcast/building-on-open-source-ai-hugging-faces-policy-chief-on-the-costs-risks-and-trade-offs/",
+      "summary": "Open source models are becoming more mainstream as enterprises, governments and startups alike rely on the promise of lower costs, more control, and more flexibility. But as increasingly capable models become more freely available, how do companies capture value? And with Chinese open models gaining ground, can American players keep up?\u00a0 On this episode of [\u2026]",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Wed, 04 Nov 2026 18:44:57 +0000",
+      "has_image": false,
+      "relevance_score": 8.0,
+      "topic": "Safety",
+      "tldr": "Open source models are becoming more mainstream as enterprises, governments and startups alike rely on the promise of lower costs, more control, and more flexibility. This development highlights the rapidly evolving AI landscape.",
+      "importance": "AI safety developments shape how companies deploy models responsibly.",
+      "formatted_date": "November 04, 2026"
+    },
+    {
+      "title": "The Download: blended meat, restored sight, and the agentic web",
+      "url": "https://www.technologyreview.com/2026/11/04/1148001/the-download-blended-meat-sight-restoring-implant-agentic-web/",
+      "summary": "This is today\u2019s edition of The Download, our weekday newsletter that provides a daily dose of what\u2019s going on in the world of technology. These startups hope \u201cblended\u201d food will cut our appetite for red meat\u00a0 In the fall of 2025, Jeff Dodge served hungry students steaming marinara sauce and meatballs. The students loved them:\u2026",
+      "image": "https://s.w.org/images/core/emoji/17.0.2/72x72/1f937-200d-2642-fe0f.png",
+      "source": "MIT Tech Review",
+      "priority": 1,
+      "date": "Wed, 04 Nov 2026 13:10:00 +0000",
+      "has_image": true,
+      "relevance_score": 6.0,
+      "topic": "Startups",
+      "tldr": "This is today\u2019s edition of The Download, our weekday newsletter that provides a daily dose of what\u2019s going on in the world of technology. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Funding trends reveal where investors see AI opportunities.",
+      "formatted_date": "November 04, 2026"
+    },
+    {
+      "title": "Texas was the new epicenter of the AI data center buildout. That might be kaput.",
+      "url": "https://www.technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput/",
+      "summary": "Texas is the fastest-growing data center market in the US and ground zero for Big Tech\u2019s largest AI buildouts. But the blue wave that swept the Lone Star State may jeopardize that position. Democrat James Talarico won the US Senate seat against Ken Paxton. Gina Hinojosa won the race for governor against the Republican incumbent,\u2026",
+      "image": null,
+      "source": "MIT Tech Review",
+      "priority": 1,
+      "date": "Wed, 04 Nov 2026 18:50:55 +0000",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "AI News",
+      "tldr": "Texas is the fastest-growing data center market in the US and ground zero for Big Tech\u2019s largest AI buildouts. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 04, 2026"
+    },
+    {
+      "title": "[AINews] Behind Latent Space: Kill My SaaS, Jev & AI in 2026 | AIEi Shanghai",
+      "url": "https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai/",
+      "summary": "November 3, 2026 \u2014 A quiet day lets us share some behind the senes.",
+      "image": null,
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Wed, 04 Nov 2026 19:17:30 GMT",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "AI News",
+      "tldr": "November 3, 2026 \u2014 A quiet day lets us share some behind the senes. Relevant for understanding current AI trends.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 04, 2026"
+    }
+  ]
+}
