@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-08",
+  "generated_at": "2026-11-08T13:09:32.837713",
+  "articles": [
+    {
+      "title": "[AINews] Inkling 2 Small: 17A-594B trained in 68 hours on 12T tokens, beating Muse Spark",
+      "url": "https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/",
+      "summary": "November 5, 2026 \u2014 Inside Inkling 2 Small\u2019s training run and METR\u2019s study of AI research at Anthropic.",
+      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/be3f29d5-989b-451c-9e6f-83ee3a29fadc/image.png?t=1793960762",
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Fri, 06 Nov 2026 10:35:21 GMT",
+      "has_image": true,
+      "relevance_score": 8.0,
+      "topic": "Research",
+      "tldr": "November 5, 2026 \u2014 Inside Inkling 2 Small\u2019s training run and METR\u2019s study of AI research at Anthropic. Relevant for understanding current AI trends.",
+      "importance": "Claude's growth signals demand for AI safety-focused alternatives.",
+      "formatted_date": "November 06, 2026"
+    },
+    {
+      "title": "[AINews] LLMs can read & write neural network weights: \"Weight Space Programming\" cuts Autoresearch out of the RSI loop",
+      "url": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of/",
+      "summary": "Editing Qwen\u2019s weights to reduce reasoning loops, DeepSeek\u2019s super-agent prototype, and the GDPx benchmark.",
+      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7c05f6ee-ac6d-4327-b763-7d43c0fa8d35/image.png?t=1793682395",
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Tue, 03 Nov 2026 05:35:00 GMT",
+      "has_image": true,
+      "relevance_score": 8.0,
+      "topic": "LLMs",
+      "tldr": "Editing Qwen\u2019s weights to reduce reasoning loops, DeepSeek\u2019s super-agent prototype, and the GDPx benchmark. Relevant for understanding current AI trends.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 03, 2026"
+    },
+    {
+      "title": "After the midterms, things are looking rocky for Elon Musk and data centers",
+      "url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/",
+      "summary": "On Equity, we unpacked what the midterms mean for the tech industry.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sat, 07 Nov 2026 22:07:22 +0000",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "AI News",
+      "tldr": "On Equity, we unpacked what the midterms mean for the tech industry. Relevant for understanding current AI trends.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 07, 2026"
+    },
+    {
+      "title": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo",
+      "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
+      "summary": "A memo circulated earlier this year reportedly claimed that China\u2019s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sat, 07 Nov 2026 21:17:08 +0000",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "Hardware",
+      "tldr": "A memo circulated earlier this year reportedly claimed that China\u2019s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO. Relevant for understanding current AI trends.",
+      "importance": "Hardware advances directly affect AI compute costs and availability.",
+      "formatted_date": "November 07, 2026"
+    },
+    {
+      "title": "Transformers Model Integration Contracts",
+      "url": "https://huggingface.co/blog/transformers-mic",
+      "summary": "",
+      "image": null,
+      "source": "Hugging Face Blog",
+      "priority": 2,
+      "date": "Tue, 03 Nov 2026 00:00:00 GMT",
+      "has_image": false,
+      "relevance_score": 4.0,
+      "topic": "AI News",
+      "tldr": "This article covers transformers model integration contracts. Important for staying current with AI developments.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 03, 2026"
+    }
+  ]
+}
