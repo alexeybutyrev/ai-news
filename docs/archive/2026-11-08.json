@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-09",
+  "generated_at": "2026-11-09T15:55:31.264373",
+  "articles": [
+    {
+      "title": "[AINews] Inkling 2 Small: 17A-594B trained in 68 hours on 12T tokens, beating Muse Spark",
+      "url": "https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/",
+      "summary": "November 5, 2026 \u2014 Inside Inkling 2 Small\u2019s training run and METR\u2019s study of AI research at Anthropic.",
+      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/be3f29d5-989b-451c-9e6f-83ee3a29fadc/image.png?t=1793960762",
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Fri, 06 Nov 2026 10:35:21 GMT",
+      "has_image": true,
+      "relevance_score": 8.0,
+      "topic": "Research",
+      "tldr": "November 5, 2026 \u2014 Inside Inkling 2 Small\u2019s training run and METR\u2019s study of AI research at Anthropic. Relevant for understanding current AI trends.",
+      "importance": "Claude's growth signals demand for AI safety-focused alternatives.",
+      "formatted_date": "November 06, 2026"
+    },
+    {
+      "title": "[AINews] LLMs can read & write neural network weights: \"Weight Space Programming\" cuts Autoresearch out of the RSI loop",
+      "url": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of/",
+      "summary": "Editing Qwen\u2019s weights to reduce reasoning loops, DeepSeek\u2019s super-agent prototype, and the GDPx benchmark.",
+      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7c05f6ee-ac6d-4327-b763-7d43c0fa8d35/image.png?t=1793682395",
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Tue, 03 Nov 2026 05:35:00 GMT",
+      "has_image": true,
+      "relevance_score": 8.0,
+      "topic": "LLMs",
+      "tldr": "Editing Qwen\u2019s weights to reduce reasoning loops, DeepSeek\u2019s super-agent prototype, and the GDPx benchmark. Relevant for understanding current AI trends.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 03, 2026"
+    },
+    {
+      "title": "Nvidia will investigate CEO Jensen Huang\u2019s relationship with possible Chinese spy",
+      "url": "https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/",
+      "summary": "In a memo to the company, Huang admitted that he had an affair.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sun, 08 Nov 2026 21:00:11 +0000",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "Startups",
+      "tldr": "In a memo to the company, Huang admitted that he had an affair. Relevant for understanding current AI trends.",
+      "importance": "Funding trends reveal where investors see AI opportunities.",
+      "formatted_date": "November 08, 2026"
+    },
+    {
+      "title": "The Apple MacBook Pro M5 is on Sale, and a Top MacBook to Buy Right Now",
+      "url": "https://www.wired.com/story/macbook-pro-m5-deal-11-6-2026/",
+      "summary": "Apple announced an updated 14-inch MacBook Pro with the latest M6 chip. But with the M5 model on sale, I\u2019m not sure the M6 is worth the upgrade.",
+      "image": null,
+      "source": "Wired",
+      "priority": 2,
+      "date": "Sun, 08 Nov 2026 10:00:00 +0000",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "Hardware",
+      "tldr": "Apple announced an updated 14-inch MacBook Pro with the latest M6 chip. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Hardware advances directly affect AI compute costs and availability.",
+      "formatted_date": "November 08, 2026"
+    },
+    {
+      "title": "Transformers Model Integration Contracts",
+      "url": "https://huggingface.co/blog/transformers-mic",
+      "summary": "",
+      "image": null,
+      "source": "Hugging Face Blog",
+      "priority": 2,
+      "date": "Tue, 03 Nov 2026 00:00:00 GMT",
+      "has_image": false,
+      "relevance_score": 4.0,
+      "topic": "AI News",
+      "tldr": "This article covers transformers model integration contracts. Important for staying current with AI developments.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 03, 2026"
+    }
+  ]
+}
