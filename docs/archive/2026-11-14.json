@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-15",
+  "generated_at": "2026-11-15T13:48:20.988636",
+  "articles": [
+    {
+      "title": "[AINews] Fable 5.2 retakes World #1 LLM spot as $ANT IPO roadshow begins",
+      "url": "https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/",
+      "summary": "November 9, 2026 \u2014 Claude Fable 5.2 and Mythos 5.2 arrive on Anthropic\u2019s IPO roadshow day. How much thinking is worth paying for?",
+      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1431029c-65fe-48ed-8eb2-798c3c5c22f4/image.png?t=1794292162",
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Tue, 10 Nov 2026 06:34:44 GMT",
+      "has_image": true,
+      "relevance_score": 11.0,
+      "topic": "LLMs",
+      "tldr": "November 9, 2026 \u2014 Claude Fable 5.2 and Mythos 5.2 arrive on Anthropic\u2019s IPO roadshow day. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Claude's growth signals demand for AI safety-focused alternatives.",
+      "formatted_date": "November 10, 2026"
+    },
+    {
+      "title": "The AI graveyard: a running list of projects and startups that didn\u2019t make it",
+      "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+      "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sat, 14 Nov 2026 17:30:00 +0000",
+      "has_image": false,
+      "relevance_score": 10.0,
+      "topic": "Startups",
+      "tldr": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations. Relevant for understanding current AI trends.",
+      "importance": "Important for understanding the AI market leader's direction.",
+      "formatted_date": "November 14, 2026"
+    },
+    {
+      "title": "[AINews] Mercor $750m Series D at $20B valuation, $3B run rate",
+      "url": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
+      "summary": "November 10, 2026 \u2014 Google GA's Gemini 4 Carbon.",
+      "image": null,
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Wed, 11 Nov 2026 09:34:28 GMT",
+      "has_image": false,
+      "relevance_score": 7.0,
+      "topic": "LLMs",
+      "tldr": "November 10, 2026 \u2014 Google GA's Gemini 4 Carbon. Relevant for understanding current AI trends.",
+      "importance": "Google's AI moves impact billions of users across search and cloud.",
+      "formatted_date": "November 11, 2026"
+    },
+    {
+      "title": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
+      "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
+      "summary": "The petition had attracted more than 115,000 signatures as of Saturday afternoon.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sat, 14 Nov 2026 21:41:22 +0000",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "Hardware",
+      "tldr": "The petition had attracted more than 115,000 signatures as of Saturday afternoon. Relevant for understanding current AI trends.",
+      "importance": "Hardware advances directly affect AI compute costs and availability.",
+      "formatted_date": "November 14, 2026"
+    },
+    {
+      "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+      "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+      "summary": "",
+      "image": null,
+      "source": "Hugging Face Blog",
+      "priority": 2,
+      "date": "Thu, 12 Nov 2026 19:07:35 GMT",
+      "has_image": false,
+      "relevance_score": 4.0,
+      "topic": "LLMs",
+      "tldr": "This article covers llmon: an llm-native markup language, now in granite 4.1 3b and 8b. Important for staying current with AI developments.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 12, 2026"
+    }
+  ]
+}
