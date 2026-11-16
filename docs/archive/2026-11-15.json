@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-16",
+  "generated_at": "2026-11-16T15:30:10.820628",
+  "articles": [
+    {
+      "title": "[AINews] Fable 5.2 retakes World #1 LLM spot as $ANT IPO roadshow begins",
+      "url": "https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/",
+      "summary": "November 9, 2026 \u2014 Claude Fable 5.2 and Mythos 5.2 arrive on Anthropic\u2019s IPO roadshow day. How much thinking is worth paying for?",
+      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1431029c-65fe-48ed-8eb2-798c3c5c22f4/image.png?t=1794292162",
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Tue, 10 Nov 2026 06:34:44 GMT",
+      "has_image": true,
+      "relevance_score": 11.0,
+      "topic": "LLMs",
+      "tldr": "November 9, 2026 \u2014 Claude Fable 5.2 and Mythos 5.2 arrive on Anthropic\u2019s IPO roadshow day. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Claude's growth signals demand for AI safety-focused alternatives.",
+      "formatted_date": "November 10, 2026"
+    },
+    {
+      "title": "[AINews] Mercor $750m Series D at $20B valuation, $3B run rate",
+      "url": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
+      "summary": "November 10, 2026 \u2014 Google GA's Gemini 4 Carbon.",
+      "image": null,
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Wed, 11 Nov 2026 09:34:28 GMT",
+      "has_image": false,
+      "relevance_score": 7.0,
+      "topic": "LLMs",
+      "tldr": "November 10, 2026 \u2014 Google GA's Gemini 4 Carbon. Relevant for understanding current AI trends.",
+      "importance": "Google's AI moves impact billions of users across search and cloud.",
+      "formatted_date": "November 11, 2026"
+    },
+    {
+      "title": "Indian chip startup Bharat Semi lands $24M seed round as it eyes global AI sensor market",
+      "url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/",
+      "summary": "Bharat Semi says it has secured design wins for its AI-enabled sensor technology with companies including General Atomics.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sun, 15 Nov 2026 23:30:00 +0000",
+      "has_image": false,
+      "relevance_score": 6.0,
+      "topic": "Startups",
+      "tldr": "Bharat Semi says it has secured design wins for its AI-enabled sensor technology with companies including General Atomics. Relevant for understanding current AI trends.",
+      "importance": "Funding trends reveal where investors see AI opportunities.",
+      "formatted_date": "November 15, 2026"
+    },
+    {
+      "title": "Is bad news for Jensen Huang also bad news for the AI industry?",
+      "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/",
+      "summary": "\"Jensen is Nvidia, right? And so much of this economy is riding on Nvidia.\"",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sun, 15 Nov 2026 21:56:35 +0000",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "Hardware",
+      "tldr": "\"Jensen is Nvidia, right? This development highlights the rapidly evolving AI landscape.",
+      "importance": "Hardware advances directly affect AI compute costs and availability.",
+      "formatted_date": "November 15, 2026"
+    },
+    {
+      "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+      "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+      "summary": "",
+      "image": null,
+      "source": "Hugging Face Blog",
+      "priority": 2,
+      "date": "Thu, 12 Nov 2026 19:07:35 GMT",
+      "has_image": false,
+      "relevance_score": 4.0,
+      "topic": "LLMs",
+      "tldr": "This article covers llmon: an llm-native markup language, now in granite 4.1 3b and 8b. Important for staying current with AI developments.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 12, 2026"
+    }
+  ]
+}

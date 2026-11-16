@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-15",
-  "generated_at": "2026-11-15T13:48:20.988636",
+  "date": "2026-11-16",
+  "generated_at": "2026-11-16T15:30:10.820628",
   "articles": [
     {
       "title": "[AINews] Fable 5.2 retakes World #1 LLM spot as $ANT IPO roadshow begins",
@@ -18,21 +18,6 @@
       "formatted_date": "November 10, 2026"
     },
     {
-      "title": "The AI graveyard: a running list of projects and startups that didn\u2019t make it",
-      "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-      "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
-      "image": null,
-      "source": "TechCrunch AI",
-      "priority": 1,
-      "date": "Sat, 14 Nov 2026 17:30:00 +0000",
-      "has_image": false,
-      "relevance_score": 10.0,
-      "topic": "Startups",
-      "tldr": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations. Relevant for understanding current AI trends.",
-      "importance": "Important for understanding the AI market leader's direction.",
-      "formatted_date": "November 14, 2026"
-    },
-    {
       "title": "[AINews] Mercor $750m Series D at $20B valuation, $3B run rate",
       "url": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
       "summary": "November 10, 2026 \u2014 Google GA's Gemini 4 Carbon.",
@@ -48,19 +33,34 @@
       "formatted_date": "November 11, 2026"
     },
     {
-      "title": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
-      "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
-      "summary": "The petition had attracted more than 115,000 signatures as of Saturday afternoon.",
+      "title": "Indian chip startup Bharat Semi lands $24M seed round as it eyes global AI sensor market",
+      "url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/",
+      "summary": "Bharat Semi says it has secured design wins for its AI-enabled sensor technology with companies including General Atomics.",
       "image": null,
       "source": "TechCrunch AI",
       "priority": 1,
-      "date": "Sat, 14 Nov 2026 21:41:22 +0000",
+      "date": "Sun, 15 Nov 2026 23:30:00 +0000",
+      "has_image": false,
+      "relevance_score": 6.0,
+      "topic": "Startups",
+      "tldr": "Bharat Semi says it has secured design wins for its AI-enabled sensor technology with companies including General Atomics. Relevant for understanding current AI trends.",
+      "importance": "Funding trends reveal where investors see AI opportunities.",
+      "formatted_date": "November 15, 2026"
+    },
+    {
+      "title": "Is bad news for Jensen Huang also bad news for the AI industry?",
+      "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/",
+      "summary": "\"Jensen is Nvidia, right? And so much of this economy is riding on Nvidia.\"",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sun, 15 Nov 2026 21:56:35 +0000",
       "has_image": false,
       "relevance_score": 5.0,
       "topic": "Hardware",
-      "tldr": "The petition had attracted more than 115,000 signatures as of Saturday afternoon. Relevant for understanding current AI trends.",
+      "tldr": "\"Jensen is Nvidia, right? This development highlights the rapidly evolving AI landscape.",
       "importance": "Hardware advances directly affect AI compute costs and availability.",
-      "formatted_date": "November 14, 2026"
+      "formatted_date": "November 15, 2026"
     },
     {
       "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
