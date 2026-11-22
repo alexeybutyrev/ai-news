@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-22",
+  "generated_at": "2026-11-22T14:25:44.587999",
+  "articles": [
+    {
+      "title": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
+      "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+      "summary": "An actor has licensed his face to a microdrama startup \u2014 in a trend that's already popular in China. Experts question the long-term consequences if this becomes a trend in Hollywood, too. ",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sat, 21 Nov 2026 16:00:00 +0000",
+      "has_image": false,
+      "relevance_score": 6.0,
+      "topic": "Startups",
+      "tldr": "An actor has licensed his face to a microdrama startup \u2014 in a trend that's already popular in China. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Funding trends reveal where investors see AI opportunities.",
+      "formatted_date": "November 21, 2026"
+    },
+    {
+      "title": "Signal restricts mobile screenshots as it confronts \u2018existential threat\u2019 of AI surveillance",
+      "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+      "summary": "Signal is limiting users' ability to take screenshots in both its Android and iOS apps.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sat, 21 Nov 2026 21:37:10 +0000",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "AI News",
+      "tldr": "Signal is limiting users' ability to take screenshots in both its Android and iOS apps. Relevant for understanding current AI trends.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 21, 2026"
+    },
+    {
+      "title": "A tale of two Nvidias",
+      "url": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/",
+      "summary": "We got two very different pictures of Nvidia \u2014  the company\u2019s latest earnings report vs. the tech executives loudly calling for Jensen Huang\u2019s return.",
+      "image": null,
+      "source": "TechCrunch AI",
+      "priority": 1,
+      "date": "Sat, 21 Nov 2026 21:07:42 +0000",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "Hardware",
+      "tldr": "We got two very different pictures of Nvidia \u2014 the company\u2019s latest earnings report vs. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Hardware advances directly affect AI compute costs and availability.",
+      "formatted_date": "November 21, 2026"
+    },
+    {
+      "title": "[AINews] Riemann Hypothesis proved...twice independently",
+      "url": "https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/",
+      "summary": "November 20 2026 \u2014\u00a0",
+      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/46cbd562-7369-4863-b0a8-00306043d65a/image.png?t=1795236179",
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Sat, 21 Nov 2026 05:02:13 GMT",
+      "has_image": true,
+      "relevance_score": 5.0,
+      "topic": "AI News",
+      "tldr": "This article covers [ainews] riemann hypothesis proved...twice independently. Important for staying current with AI developments.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 21, 2026"
+    },
+    {
+      "title": "ChatGPT shrunk down to run on a Super Nintendo",
+      "url": "https://www.theregister.com/offbeat/2026/11/21/chatgpt-shrunk-down-to-run-on-a-super-nintendo/5311418",
+      "summary": " Just don't expect complex, coherent, or always correct answers ",
+      "image": null,
+      "source": "The Register",
+      "priority": 3,
+      "date": "Sat, 21 Nov 2026 11:46:00 +0000",
+      "has_image": false,
+      "relevance_score": 4.5,
+      "topic": "LLMs",
+      "tldr": "Just don't expect complex, coherent, or always correct answers Relevant for understanding current AI trends.",
+      "importance": "Enterprise-focused AI models are becoming a distinct market segment.",
+      "formatted_date": "November 21, 2026"
+    }
+  ]
+}
