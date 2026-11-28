@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-28",
+  "generated_at": "2026-11-28T15:21:52.412695",
+  "articles": [
+    {
+      "title": "Inside the AI Training Data Market \u2014 Gabe Greenberg, G2i",
+      "url": "https://latent.space/p/inside_the_ai_training_data_market_gabe_greenberg_g2i/",
+      "summary": "A frontier lab can pay more for training data it gets to keep exclusive, or take a discount on data another lab can buy too. At AI Engineer CODE, G2i founder Gabe Greenberg tells swyx how labs make that decision, how small pilot orders turn into bigger...",
+      "image": null,
+      "source": "Latent Space",
+      "priority": 1,
+      "date": "Fri, 27 Nov 2026 22:19:18 GMT",
+      "has_image": false,
+      "relevance_score": 6.0,
+      "topic": "AI News",
+      "tldr": "A frontier lab can pay more for training data it gets to keep exclusive, or take a discount on data another lab can buy too. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 27, 2026"
+    },
+    {
+      "title": "The Download: Innovators Under 35 nominations are open, and a bionic window into the mind",
+      "url": "https://www.technologyreview.com/2026/11/27/1149960/the-download-the-download-innovators-under-35-nominations-bionic-hand/",
+      "summary": "This is today\u2019s edition of The Download, our weekday newsletter that provides a daily dose of what\u2019s going on in the world of technology. Our 2027 Innovators Under 35 competition is now open Every year, MIT Technology Review honors 35 of the world\u2019s brightest young scientists, entrepreneurs, and inventors in our Innovators Under 35 list.\u2026",
+      "image": "https://wp.technologyreview.com/wp-content/uploads/2026/02/MITcarscams.jpg?w=840",
+      "source": "MIT Tech Review",
+      "priority": 1,
+      "date": "Fri, 27 Nov 2026 13:00:00 +0000",
+      "has_image": true,
+      "relevance_score": 5.0,
+      "topic": "AI News",
+      "tldr": "This is today\u2019s edition of The Download, our weekday newsletter that provides a daily dose of what\u2019s going on in the world of technology. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 27, 2026"
+    },
+    {
+      "title": "Our 2027 Innovators Under 35 competition is now open",
+      "url": "https://www.technologyreview.com/2026/11/27/1149857/2027-innovators-under-35-competition-nominate/",
+      "summary": "Every year, the editors at MIT Technology Review select 35 of the world\u2019s top young scientists, entrepreneurs, and inventors to honor as our newest class of Innovators Under 35. And starting today, our 2027 competition is officially open for nominations.\u00a0 We\u2019re on the hunt for researchers and founders who are engineering solutions to some of\u2026",
+      "image": null,
+      "source": "MIT Tech Review",
+      "priority": 1,
+      "date": "Fri, 27 Nov 2026 10:48:47 +0000",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "Research",
+      "tldr": "Every year, the editors at MIT Technology Review select 35 of the world\u2019s top young scientists, entrepreneurs, and inventors to honor as our newest class of Innovators Under 35. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 27, 2026"
+    },
+    {
+      "title": "How cutting-edge prosthetics can help probe the human mind",
+      "url": "https://www.technologyreview.com/2026/11/27/1149946/cutting-edge-prosthetics-allow-researchers-to-probe-the-human-mind/",
+      "summary": "Over the last few weeks, I\u2019ve been talking to Alexander (Avi) Davidson. There are a lot of remarkable things about Avi. He sustained a horrific injury as a teenager, which left him paralyzed and without a left hand. Today, he uses his own experience to guide his practice as a trauma therapist. He\u2019s also taking\u2026",
+      "image": null,
+      "source": "MIT Tech Review",
+      "priority": 1,
+      "date": "Fri, 27 Nov 2026 10:00:00 +0000",
+      "has_image": false,
+      "relevance_score": 5.0,
+      "topic": "AI News",
+      "tldr": "Over the last few weeks, I\u2019ve been talking to Alexander (Avi) Davidson. This development highlights the rapidly evolving AI landscape.",
+      "importance": "Relevant for staying current with AI industry developments.",
+      "formatted_date": "November 27, 2026"
+    },
+    {
+      "title": "A New Breed of Chip Runs AI Models Using Waves of Light",
+      "url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+      "summary": "German company Q.ANT is trying to cut the amount of energy required to run AI models by using light to perform the toughest calculations.",
+      "image": null,
+      "source": "Wired",
+      "priority": 2,
+      "date": "Fri, 27 Nov 2026 07:00:00 +0000",
+      "has_image": false,
+      "relevance_score": 3.0,
+      "topic": "Hardware",
+      "tldr": "German company Q.ANT is trying to cut the amount of energy required to run AI models by using light to perform the toughest calculations. Relevant for understanding current AI trends.",
+      "importance": "Hardware advances directly affect AI compute costs and availability.",
+      "formatted_date": "November 27, 2026"
+    }
+  ]
+}
